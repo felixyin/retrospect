@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
-cd /root/retrospect
 
-mkdir backup
+mkdir /root/backup
 
 send=`date '+%Y-%m-%d-%H:%M:%S'`
 
-tar -czvf  /root/retrospect/backup/media-${send}.tar.gz /root/retrospect/media/
+tar -czvf  /root/backup/media-${send}.tar.gz /root/retrospect/media/
+
+cd /root/retrospect
 
 git pull
 
