@@ -3,7 +3,7 @@
 
 mkdir /root/backup
 
-send=`date '+%Y-%m-%d-%H:%M:%S'`
+send=`date '+%Y%m%d-%H%M%S'`
 
 tar -czvf  /root/backup/media-${send}.tar.gz /root/retrospect/media/
 
