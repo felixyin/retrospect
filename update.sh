@@ -15,6 +15,8 @@ git reset --hard origin/master
 
 git pull
 
+sudo chmod 777 update.sh
+
 python manage.py collectstatic
 
 python manage.py makemigrations
