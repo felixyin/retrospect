@@ -1,4 +1,4 @@
-$color: #9c3328;
+$color: #C82908;
 $fontSize: 35px;
 $tabFontSize: 45px;
 $titleFontSize: 25px;
@@ -107,6 +107,10 @@ html, body {
       }
     }
   }
+  .retrospect-item {
+    @extend .info-item;
+
+  }
 }
 
 .my-btn {
@@ -117,8 +121,27 @@ html, body {
   justify-content: center;
   align-items: center;
   button {
+    border-radius: 0;
     background-color: #C72B07;
     width: 50%;
     height: 39px;
   }
+}
+
+.my-xingjiu {
+  color: #9b9b9b;
+}
+
+.time {
+  color: $color;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.store {
+  color: $color;
+  border: 1px solid $color;
+  padding: 3px;
+  margin-left: 4px;
+  margin-right: 4px;
 }

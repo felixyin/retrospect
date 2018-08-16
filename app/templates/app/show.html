@@ -48,7 +48,7 @@
         <div class="col col-md-auto text-center ">
             {{ wi.batch.wine.name }}
         </div>
-{#        <p class="my-wine-code">瓶身编号:{{ wi.wine_code }}</p>#}
+        {#        <p class="my-wine-code">瓶身编号:{{ wi.wine_code }}</p>#}
     </div>
 </div>
 
@@ -93,29 +93,57 @@
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <div class="prod-container">
-                <p>
-                    该产品醒酒时间大约在<span class="time">{{ wi.batch.wine.sober_up_time_best }}min</span>
-                </p>
-                <p>
-                    醒酒<span class="time">{{ wi.batch.wine.sober_up_time1 }}min</span>左右:{{ wi.batch.wine.sober_up_taste1 }}
-                </p>
-                <p>
-                    醒酒<span class="time">{{ wi.batch.wine.sober_up_time2 }}min</span>左右:{{ wi.batch.wine.sober_up_taste2 }}
-                </p>
-                <p>
-                    醒酒<span class="time">{{ wi.batch.wine.sober_up_time3 }}min</span>左右:{{ wi.batch.wine.sober_up_taste3 }}
-                </p>
-                <p>
-                    该产品醒酒不宜超过<span class="time">{{ wi.batch.wine.sober_up_time_worst }}min</span>
-                </p>
-                <p>
-                    开瓶后应<span class="store">{{ wi.batch.wine.storage_mode }}</span>方式存放
-                </p>
-            </div>
+        <div class="tab-pane fade my-xingjiu" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <p>
+                该产品醒酒时间大约在<span class="time">{{ wi.batch.wine.sober_up_time_best }}min</span>
+            </p>
+            <p>
+                醒酒<span class="time">{{ wi.batch.wine.sober_up_time1 }}min</span>左右:{{ wi.batch.wine.sober_up_taste1 }}
+            </p>
+            <p>
+                醒酒<span class="time">{{ wi.batch.wine.sober_up_time2 }}min</span>左右:{{ wi.batch.wine.sober_up_taste2 }}
+            </p>
+            <p>
+                醒酒<span class="time">{{ wi.batch.wine.sober_up_time3 }}min</span>左右:{{ wi.batch.wine.sober_up_taste3 }}
+            </p>
+            <p>
+                该产品醒酒不宜超过<span class="time">{{ wi.batch.wine.sober_up_time_worst }}min</span>
+            </p>
+            <p>
+                开瓶后应<span class="store">{{ wi.batch.wine.storage_mode }}</span>方式存放
+            </p>
         </div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">xxx..3.</div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="retrospect-item">
+                <div class="info-title">溯源信息</div>
+                <p>原产地:{{ wi.batch.wine.area_name }}</p>
+                <p>原产地证:</p>
+                <img class="info-img" src="{{ wi.batch.wine.area.url }}"/>
+                <p>成分:{{ wi.batch.element }}</p>
+                <p>存储条件:{{ wi.batch.wine.storage_mode }}</p>
+                <p>进口代理商:{{ wi.batch.agent_com }}</p>
+                <img class="info-img" src="{{ wi.batch.promise_book.url }}"/>
+            </div>
+            <div class="retrospect-item">
+                <div class="info-title">检测信息</div>
+                <p>检测日期:{{ wi.batch.check_date }}</p>
+                <p>寄检单号:{{ wi.batch.check_code }}</p>
+                <p>检验控疫证明:</p>
+                <img class="info-img" src="{{ wi.batch.check_prove.url }}"/>
+                <p>成分分析证书:</p>
+                <img class="info-img" src="{{ wi.batch.analyze_book.url }}"/>
+                <p>报检企业:{{ wi.batch.inspection_com }}</p>
+            </div>
+            <div class="retrospect-item">
+                <div class="info-title">通关信息</div>
+                <p>报关时间:{{ wi.batch.bill_time }}</p>
+                <p>报关单号:{{ wi.batch.bill_code }}</p>
+                <p>海关通关单:</p>
+                <img class="info-img" src="{{ wi.batch.bill_img.url }}"/>
+                <p>报关企业:{{ wi.batch.bill_com }}</p>
+            </div>
+
+        </div>
     </div>
 
 </div>

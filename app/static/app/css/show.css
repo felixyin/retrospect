@@ -55,17 +55,17 @@ html, body {
 
 .tab-pane {
   margin-bottom: 100px; }
-  .tab-pane .info-item {
+  .tab-pane .info-item, .tab-pane .retrospect-item {
     padding-top: 8px;
     padding-bottom: 8px; }
-    .tab-pane .info-item .info-title {
+    .tab-pane .info-item .info-title, .tab-pane .retrospect-item .info-title {
       font-size: 18px;
       color: #676767;
       margin-bottom: 5px; }
-    .tab-pane .info-item .info-img {
+    .tab-pane .info-item .info-img, .tab-pane .retrospect-item .info-img {
       width: 100%;
       border-radius: 4px; }
-    .tab-pane .info-item .info-content p {
+    .tab-pane .info-item .info-content p, .tab-pane .retrospect-item .info-content p {
       color: #454545;
       margin-bottom: 0; }
 
@@ -77,8 +77,24 @@ html, body {
   justify-content: center;
   align-items: center; }
   .my-btn button {
+    border-radius: 0;
     background-color: #C72B07;
     width: 50%;
     height: 39px; }
+
+.my-xingjiu {
+  color: #9b9b9b; }
+
+.time {
+  color: #C82908;
+  margin-left: 4px;
+  margin-right: 4px; }
+
+.store {
+  color: #C82908;
+  border: 1px solid #C82908;
+  padding: 3px;
+  margin-left: 4px;
+  margin-right: 4px; }
 
 /*# sourceMappingURL=show.css.map */
