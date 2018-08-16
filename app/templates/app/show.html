@@ -8,21 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title></title>
     {% compress css %}
-        <link rel="stylesheet" href="{% static 'app/bootstrap_4/css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'app/css/show.css' %}">
+        <link rel="stylesheet" href="{% static 'app/bootstrap_4/css/bootstrap.min.css' %}">
     {% endcompress %}
 
 </head>
 <body>
 
-<div class="container my-banner">
+<div class="container my-container">
     <div class="row">
         <div class="col-sm">
-
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     {% for banner in banners %}
-                        <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.counter0 }}" class=" {% if forloop.first %} active {% endif %}"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.counter0 }}"
+                            class=" {% if forloop.first %} active {% endif %}"></li>
                     {% endfor %}
                 </ol>
                 <div class="carousel-inner">
@@ -43,79 +43,91 @@
             </div>
         </div>
     </div>
-</div>
 
-
-<div class="flex-container">
-    <div class="title">
-        <div>{{ wi.batch.wine.name }}</div>
-        <span>瓶身编号:823823872</span>
+    <div class="row justify-content-md-center align-items-center my-title he-xiao-ok">
+        <div class="col col-md-auto text-center ">
+            {{ wi.batch.wine.name }}
+        </div>
+{#        <p class="my-wine-code">瓶身编号:{{ wi.wine_code }}</p>#}
     </div>
 </div>
 
-<div class="tab-container">
-    <div class="tab-item clicked">产品信息</div>
-    <div class="tab-item">醒酒信息</div>
-    <div class="tab-item">追溯信息</div>
-</div>
-<hr>
-<div id="tab-content">
-    <div class="prod-container">
-        <div class="info-item">
-            <div class="info-title">产地:{{ wi.batch.wine.area_name }}</div>
-{#            <img class="info-img" src="{{ wi.batch.wine.area.url }}"/>#}
-        </div>
-        <div class="info-item">
-            <div class="info-title">酒庄:{{ wi.batch.wine.chateau_name }}</div>
-{#            <img class="info-img" src="{{ wi.batch.wine.chateau.url }}"/>#}
-        </div>
-        <div class="info-item">
-            <div class="info-title">产品介绍</div>
-            <div class="info-content">
-                {{ wi.batch.wine.description | custom_markdown }}
+
+<div class="container" style="padding: 0!important;">
+    <div class="my-tab">
+        <ul class="nav nav-justified " id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                   aria-selected="true">商品信息</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                   aria-selected="false">醒酒信息</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                   aria-selected="false">追溯信息</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content" id="myTabContent" style="padding: 15px;">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="info-item">
+                <div class="info-title">产地:{{ wi.batch.wine.area_name }}</div>
+                <img class="info-img" src="{{ wi.batch.wine.area.url }}"/>
+            </div>
+            <div class="info-item">
+                <div class="info-title">酒庄:{{ wi.batch.wine.chateau_name }}</div>
+                <img class="info-img" src="{{ wi.batch.wine.chateau.url }}"/>
+            </div>
+            <div class="info-item">
+                <div class="info-title">产品介绍</div>
+                <div class="info-content">
+                    {{ wi.batch.wine.description | custom_markdown }}
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-title">产品特点</div>
+                <div class="info-content">
+                    {{ wi.batch.wine.feature | custom_markdown }}
+                </div>
             </div>
         </div>
-        <div class="info-item">
-            <div class="info-title">产品特点</div>
-            <div class="info-content">
-                {{ wi.batch.wine.feature | custom_markdown }}
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="prod-container">
+                <p>
+                    该产品醒酒时间大约在<span class="time">{{ wi.batch.wine.sober_up_time_best }}min</span>
+                </p>
+                <p>
+                    醒酒<span class="time">{{ wi.batch.wine.sober_up_time1 }}min</span>左右:{{ wi.batch.wine.sober_up_taste1 }}
+                </p>
+                <p>
+                    醒酒<span class="time">{{ wi.batch.wine.sober_up_time2 }}min</span>左右:{{ wi.batch.wine.sober_up_taste2 }}
+                </p>
+                <p>
+                    醒酒<span class="time">{{ wi.batch.wine.sober_up_time3 }}min</span>左右:{{ wi.batch.wine.sober_up_taste3 }}
+                </p>
+                <p>
+                    该产品醒酒不宜超过<span class="time">{{ wi.batch.wine.sober_up_time_worst }}min</span>
+                </p>
+                <p>
+                    开瓶后应<span class="store">{{ wi.batch.wine.storage_mode }}</span>方式存放
+                </p>
             </div>
         </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">xxx..3.</div>
     </div>
-    <div class="prod-container">
-        <p>
-            该产品醒酒时间大约在<span class="time">{{ wi.batch.wine.sober_up_time_best }}min</span>
-        </p>
-        <p>
-            醒酒<span class="time">{{ wi.batch.wine.sober_up_time1 }}min</span>左右:{{ wi.batch.wine.sober_up_taste1 }}
-        </p>
-        <p>
-            醒酒<span class="time">{{ wi.batch.wine.sober_up_time2 }}min</span>左右:{{ wi.batch.wine.sober_up_taste2 }}
-        </p>
-        <p>
-            醒酒<span class="time">{{ wi.batch.wine.sober_up_time3 }}min</span>左右:{{ wi.batch.wine.sober_up_taste3 }}
-        </p>
-        <p>
-            该产品醒酒不宜超过<span class="time">{{ wi.batch.wine.sober_up_time_worst }}min</span>
-        </p>
-        <p>
-            开瓶后应<span class="store">{{ wi.batch.wine.storage_mode }}</span>方式存放
-        </p>
-    </div>
-    <div class="prod-container">
-        nothing
-    </div>
+
 </div>
 
-{% if wi.status == 'w' %}
-    <div class="he-xiao">
-        <button>一键核销</button>
-    </div>
-{% else %}
-    <div class="he-xiao-over">
-        <button>已经核销</button>
-    </div>
-{% endif %}
+<div class="my-btn fixed-bottom">
+    {% if wi.status == 'w' %}
+        <button type="button" class="btn btn-danger">一键核销</button>
+    {% else %}
+        <button type="button" class="btn btn-danger btn-secondary">已经核销</button>
+    {% endif %}
+</div>
+
 
 <div style="display: none;">
 

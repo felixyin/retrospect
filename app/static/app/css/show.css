@@ -1,84 +1,84 @@
-@charset "UTF-8";
 html, body {
-  width: 100% !important;
-  margin: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important; }
+
+.my-container .row {
   padding: 0; }
-
-.flex-container {
-  display: flex;
-  flex-direction: column; }
-  .flex-container .banner img {
-    width: 100%; }
-  .flex-container .title {
-    height: 180px;
-    background-image: url("../img/title_bg.png");
-    background-repeat: no-repeat; }
-    .flex-container .title div {
-      margin: 0 auto;
-      line-height: 180px;
-      text-align: center;
-      font-size: 45px;
-      color: #474949;
-      font-weight: bold;
-      font-family: "Microsoft YaHei", "微软雅黑", Helvetica, Tahoma, STXihei, "华文细黑", STHeiti, "Helvetica Neue", Helvetica, Tahoma, "Droid Sans", "wenquanyi micro hei", FreeSans, Arimo, Arial, SimSun, "宋体", Heiti, "黑体", sans-serif; }
-    .flex-container .title span {
-      position: relative;
-      float: right;
-      right: 25%;
-      top: -50px;
-      font-size: 22px; }
-
-.tab-container {
-  margin-top: 8px;
-  display: flex; }
-  .tab-container .tab-item {
-    flex: 1;
-    text-align: center;
-    height: 80px;
-    line-height: 80px;
-    font-size: 45px;
-    border-right: 1px solid #474949; }
-  .tab-container .tab-item:last-child {
-    border-right: 0; }
-
-.prod-container {
-  font-size: 35px; }
-
-#tab-content .prod-container {
-  display: none; }
-#tab-content .prod-container:first-child {
-  display: block; }
-
-.he-xiao, .he-xiao-over {
-  text-align: center; }
-  .he-xiao button, .he-xiao-over button {
-    width: 50%;
-    height: 75px;
-    line-height: 65px;
-    background-color: #C72B07;
-    color: white;
-    margin: 0 auto;
-    font-size: 40px; }
-
-.he-xiao-over button {
-  background-color: #474949; }
-
-.clicked {
-  color: #9c3328; }
-
-.time {
-  color: #9c3328; }
-
-.store {
-  color: #9c3328;
-  border: 2px solid #9c3328; }
-
-.my-banner {
-  padding-left: 0;
-  padding-right: 0; }
-  .my-banner .row {
+  .my-container .row .col-sm {
     padding: 0; }
-    .my-banner .row .col-sm {
-      padding: 0; }
+
+.he-xiao, .he-xiao-ok, .he-xiao-not {
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.he-xiao-ok {
+  background-image: url("/static/app/img/ok-hexiao.jpg"); }
+
+.he-xiao-not {
+  background-image: url("/static/app/img/not-hexiao.jpg"); }
+
+.my-title {
+  height: 100px;
+  background-color: #F7F7F7; }
+  .my-title div {
+    color: white; }
+  .my-title .my-wine-code {
+    float: right;
+    top: 40px;
+    color: black;
+    font-size: 10px;
+    left: 57%; }
+
+.my-tab {
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px dotted #D5D5D5;
+  border-top: 1px dotted #D5D5D5; }
+  .my-tab .nav {
+    flex: 1; }
+    .my-tab .nav .nav-item {
+      border-right: 1px solid #D8D8D8; }
+      .my-tab .nav .nav-item .nav-link {
+        height: 28px;
+        font-size: 18px;
+        padding-top: 0;
+        padding-bottom: 0;
+        color: #9b9b9b; }
+      .my-tab .nav .nav-item .active {
+        color: #C62C03; }
+    .my-tab .nav .nav-item:last-child {
+      border: 0; }
+
+.tab-pane {
+  margin-bottom: 100px; }
+  .tab-pane .info-item {
+    padding-top: 8px;
+    padding-bottom: 8px; }
+    .tab-pane .info-item .info-title {
+      font-size: 18px;
+      color: #676767;
+      margin-bottom: 5px; }
+    .tab-pane .info-item .info-img {
+      width: 100%;
+      border-radius: 4px; }
+    .tab-pane .info-item .info-content p {
+      color: #454545;
+      margin-bottom: 0; }
+
+.my-btn {
+  background-color: #F7F7F7;
+  border-top: 1px solid #E5E5E5;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .my-btn button {
+    background-color: #C72B07;
+    width: 50%;
+    height: 39px; }
 
 /*# sourceMappingURL=show.css.map */
