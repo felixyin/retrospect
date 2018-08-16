@@ -11,17 +11,24 @@ from .models import *
 
 
 # Register your models here.
-# class FilesInline(admin.TabularInline):
-#     model = Files
-#     min_num = 0
-#     max_num = 10
+class ChateauAttachInline(admin.TabularInline):
+    model = ChateauAttach
+    min_num = 1
+    max_num = 5
+
+
+class AreaAttachInline(admin.TabularInline):
+    model = AreaAttach
+    min_num = 1
+    max_num = 5
 
 
 class WineAdmin(admin.ModelAdmin):
-    list_display = ('name', 'chateau', 'area', 'last_mod_time', 'sequence', 'is_enable')
+    list_display = ('name', 'last_mod_time', 'sequence', 'is_enable')
     search_fields = ('name', 'description', 'feature')
     list_filter = ('is_enable',)
     exclude = ('created_time',)
+    inlines = [ChateauAttachInline, AreaAttachInline]
 
 
 class HomeAttachAdmin(admin.ModelAdmin):

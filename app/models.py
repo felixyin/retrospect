@@ -25,6 +25,43 @@ class BaseModel(m.Model):
 
 class HomeAttach(m.Model):
     banner = m.ImageField('轮播图', upload_to='upload/home/banner/%y/%m/')
+    sequence = m.IntegerField('排列顺序', unique=True, null=True, blank=True, editable=False)
+
+    def __str__(self):
+        return '首页轮播图'
+
+    class Meta:
+        verbose_name = "首页轮播图"
+        verbose_name_plural = verbose_name
+        ordering = ['sequence', ]
+
+
+class ChateauAttach(m.Model):
+    img = m.ImageField('轮播图', upload_to='upload/wine/chateau/%y/%m/')
+    sequence = m.IntegerField('排列顺序', unique=True, null=True, blank=True, editable=False)
+    wine = m.ForeignKey('Wine', on_delete=m.DO_NOTHING)
+
+    def __str__(self):
+        return '酒庄介绍轮播图'
+
+    class Meta:
+        verbose_name = "酒庄介绍"
+        verbose_name_plural = verbose_name
+        ordering = ['sequence', ]
+
+
+class AreaAttach(m.Model):
+    img = m.ImageField('轮播图', upload_to='upload/wine/area/%y/%m/')
+    sequence = m.IntegerField('排列顺序', unique=True, null=True, blank=True, editable=False)
+    wine = m.ForeignKey('Wine', on_delete=m.DO_NOTHING)
+
+    def __str__(self):
+        return '产区介绍轮播图'
+
+    class Meta:
+        verbose_name = "产区介绍"
+        verbose_name_plural = verbose_name
+        ordering = ['sequence', ]
 
 
 # Create your models here.
@@ -34,9 +71,9 @@ class Wine(BaseModel):
     description = RichTextField(max_length=500, config_name='full', verbose_name='产品介绍')
     feature = RichTextField(max_length=500, config_name='full', verbose_name='产品特点')
     chateau_name = m.CharField('酒庄名称', max_length=50, blank=False)
-    chateau = m.ImageField('酒庄介绍', upload_to='upload/wine/chateau/%Y/%m/')
+    # chateau = m.ImageField('酒庄介绍', upload_to='upload/wine/chateau/%Y/%m/')
     area_name = m.CharField('产区名称', max_length=50, blank=False)
-    area = m.ImageField('产区介绍', upload_to='upload/wine/area/%Y/%m/')
+    # area = m.ImageField('产区介绍', upload_to='upload/wine/area/%Y/%m/')
 
     certificate = m.ImageField('原产地证', upload_to='upload/wine/cert/%y/%m/', default=None, null=True)
     element = RichTextField(max_length=50, config_name='mini', verbose_name='成分', default=None, null=True)
