@@ -10,6 +10,7 @@
     {% compress css %}
         <link rel="stylesheet" href="{% static 'app/css/show.css' %}">
         <link rel="stylesheet" href="{% static 'app/bootstrap_4/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'app/magnific_popup/magnific-popup.css' %}">
     {% endcompress %}
 
 </head>
@@ -74,7 +75,7 @@
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="info-item">
                 <div class="info-title">产地:{{ wi.batch.wine.area_name }}</div>
-{#                <img class="info-img" src="{{ wi.batch.wine.area.url }}"/>#}
+                {#                <img class="info-img" src="{{ wi.batch.wine.area.url }}"/>#}
                 <div class="row">
                     <div class="col-sm">
                         <div id="carouselArea" class="carousel slide" data-ride="carousel">
@@ -87,7 +88,9 @@
                             <div class="carousel-inner">
                                 {% for areaAttach in wi.batch.wine.areaattach_set.all %}
                                     <div class="carousel-item  {% if forloop.first %} active {% endif %} ">
-                                        <img class="d-block w-100" src="{{ areaAttach.img.url }}">
+                                        <a class="my-img-open" href="{{ areaAttach.img.url }}" title="产地">
+                                            <img class="d-block w-100" src="{{ areaAttach.img.url }}">
+                                        </a>
                                     </div>
                                 {% endfor %}
                             </div>
@@ -105,7 +108,7 @@
             </div>
             <div class="info-item">
                 <div class="info-title">酒庄:{{ wi.batch.wine.chateau_name }}</div>
-{#                <img class="info-img" src="{{ wi.batch.wine.chateau.url }}"/>#}
+                {#                <img class="info-img" src="{{ wi.batch.wine.chateau.url }}"/>#}
                 <div class="row">
                     <div class="col-sm">
                         <div id="carouselChateau" class="carousel slide" data-ride="carousel">
@@ -118,7 +121,9 @@
                             <div class="carousel-inner">
                                 {% for areaAttach in wi.batch.wine.chateauattach_set.all %}
                                     <div class="carousel-item  {% if forloop.first %} active {% endif %} ">
-                                        <img class="d-block w-100" src="{{ areaAttach.img.url }}">
+                                        <a class="my-img-open" href="{{ areaAttach.img.url }}" title="酒庄">
+                                            <img class="d-block w-100" src="{{ areaAttach.img.url }}">
+                                        </a>
                                     </div>
                                 {% endfor %}
                             </div>
@@ -284,13 +289,42 @@
     <script type="text/javascript" src="{% static 'app/js/jquery-3.3.1.slim.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'app/js/popper.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'app/bootstrap_4/js/bootstrap.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'app/js/zepto.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app/magnific_popup/jquery.magnific-popup.min.js' %}"></script>
+
     <script type="text/javascript">
         var tabs = $('.tab-container').children();
         var tab_contents = $('#tab-content').children();
         tabs.click(function () {
             tabs.removeClass('clicked');
             $(tab_contents.hide().get($(this).addClass('clicked').index())).show();
+        });
+
+        $('.my-img-open').magnificPopup({
+            {#disableOn: 400,#}
+            closeBtnInside: true,
+            midClick: true,
+            type: 'image',
+            mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+            removalDelay: 300,
+
+
+            gallery: {
+                enabled: true, // set to true to enable gallery
+
+                preload: [0, 2], // read about this option in next Lazy-loading section
+
+                navigateByImgClick: true,
+            },
+            zoom: {
+                enabled: true, // By default it's false, so don't forget to enable it
+
+                duration: 300, // duration of the effect, in milliseconds
+                easing: 'ease-in-out'
+            },
+            image: {
+                verticalFit: true, // Fits image in area vertically
+
+            }
         });
     </script>
 {% endcompress %}
