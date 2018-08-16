@@ -39,7 +39,7 @@ html, body {
   color: black;
   font-size: 10px;
   left: -17%;
-  z-index: 100000; }
+  z-index: 100; }
   .my-wine-code span {
     margin-top: 6px;
     height: 2px;
@@ -125,5 +125,8 @@ html, body {
   padding: 3px;
   margin-left: 4px;
   margin-right: 4px; }
+
+.modal-backdrop {
+  z-index: 10 !important; }
 
 /*# sourceMappingURL=show.css.map */

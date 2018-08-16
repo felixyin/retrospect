@@ -30,6 +30,7 @@ html, body {
   background-position: center;
 }
 
+// 已经核销的标题样式
 .he-xiao-ok {
   .my-title {
     @extend .he-xiao;
@@ -42,6 +43,7 @@ html, body {
   }
 }
 
+// 未核销的标题样式
 .he-xiao-not {
   .my-title {
     @extend .he-xiao;
@@ -54,7 +56,7 @@ html, body {
   }
 }
 
-// 标题的显示
+// 标题区域的显示
 .my-title {
   height: 100px;
   background-color: #F7F7F7;
@@ -64,6 +66,7 @@ html, body {
   }
 }
 
+// 标题区域的瓶身编号
 .my-wine-code {
   position: relative;
   height: 15px;
@@ -72,7 +75,7 @@ html, body {
   color: black;
   font-size: 10px;
   left: -17%;
-  z-index: 100000;
+  z-index: 100;
   span {
     margin-top: 6px;
     height: 2px;
@@ -112,9 +115,9 @@ html, body {
   }
 }
 
-//
 .tab-pane {
   margin-bottom: 100px;
+  // 商品信息 和 醒酒信息 tab的内容区域
   .info-item {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -134,6 +137,7 @@ html, body {
       }
     }
   }
+  // 追溯信息tab的内容区域
   .retrospect-item {
     @extend .info-item;
     .info-title {
@@ -155,6 +159,7 @@ html, body {
   }
 }
 
+// 最下面的fix固定的核销按钮
 .my-btn {
   background-color: #F7F7F7;
   border-top: 1px solid #E5E5E5;
@@ -174,16 +179,23 @@ html, body {
   color: #9b9b9b;
 }
 
+// 醒酒时间
 .time {
   color: $color;
   margin-left: 4px;
   margin-right: 4px;
 }
 
+// 存储方式
 .store {
   color: $color;
   border: 1px solid $color;
   padding: 3px;
   margin-left: 4px;
   margin-right: 4px;
+}
+
+// 修复遮罩在最上面的问题
+.modal-backdrop {
+  z-index: 10!important;
 }
