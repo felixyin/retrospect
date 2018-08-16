@@ -22,3 +22,10 @@ python manage.py collectstatic
 python manage.py makemigrations
 
 python manage.py migrate
+
+killall -9 uwsgi
+
+nohup uwsgi --ini uwsgi.ini & ls
+
+ls
+
