@@ -236,55 +236,112 @@
     </div>
 </div>
 
+{# ==============================================  核销对话框 ==============================================  #}
+<!-- Modal -->
+<div id="hx-model" class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <form action="{% url 'app:he-xiao' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{ wi.id }}">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">轻轻一点是您对原瓶进口红酒的支持</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 55px;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label class="col-12 col-form-label">1.每瓶产品都拥有只属于自己的一组身份编码</label>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-12 col-form-label">2.验证真伪核销后，此组身份编码即刻失效</label>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-12 col-form-label">3.商品状态已核销，请及时联系销售商，避免损失</label>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-12 col-form-label">4.关注微信公众号，随时获得活动信息</label>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-7 center-column">
+                            <input name="security_code" type="text" class="form-control" id="inputVerifyCode2"
+                                   placeholder="请输入验证码">
+                        </div>
+                    </div>
+                    <div id="vcSuccess" class="alert alert-success alert-dismissable" style="display: none;">
+                        <strong>提示：</strong> 验证码正确
+                    </div>
+                    <div id="vcFailed" class="alert alert-warning alert-dismissable" style="display: none;">
+                        <strong>错误：</strong> <span>验证码错误</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="cancel-vc" type="button" class="btn btn-info ">取消</button>
+                    <button id="submit-vc" type="submit" class="btn btn-primary ">确认</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
 {# ==============================================  底部按钮 ==============================================  #}
 <div class="my-btn fixed-bottom">
     {% if wi.status == 'w' %}
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
-            一键核销
-        </button>
-
+        <button id="he-xiao-btn" type="button" class="btn btn-danger" data-toggle="modal">一键核销</button>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        <div id="vc-model" class="modal fade" tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalCenterTitle"
              aria-hidden="true">
-            <form action="{% url 'app:ckeditor_browse'  %}" method="post">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalCenterTitle">注册账号</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 55px;">
-                                <span aria-hidden="true">&times;</span>
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">注册账号</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 55px;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label for="inputPhone1" class="col-12 col-form-label">手机号</label>
+                            <div class="col-12">
+                                <input name="phone" type="text" class="form-control" id="inputPhone1" placeholder="请输入您的手机号">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputVerifyCode1" class="col-12 col-form-label">验证码</label>
+                            <div class="col-7">
+                                <input name="verify_code" type="text" class="form-control" id="inputVerifyCode1"
+                                       placeholder="请输入验证码">
+                            </div>
+                            <button id="get-verify-code" type="button" class="btn btn-primary col-4 "
+                                    style="margin-left: 15px;">获得验证码
                             </button>
                         </div>
-                        <div class="modal-body">
-                            <div class="form-group row">
-                                <label for="inputEmail3" class="col-12 col-form-label">手机号</label>
-                                <div class="col-12">
-                                    <input type="text" class="form-control" id="inputEmail3" placeholder="请输入您的手机号">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputPassword3" class="col-12 col-form-label">验证码</label>
-                                <div class="col-7">
-                                    <input type="text" class="form-control" id="inputPassword3" placeholder="请输入验证码">
-                                </div>
-                                <button type="button" class="btn btn-primary col-4" style="margin-left: 15px;">获得验证码</button>
-                            </div>
+                        <div id="sendOkMsg" class="alert alert-success alert-dismissable" style="display: none;">
+                            <strong>提示：</strong> 短信验证码已发送
                         </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">确认</button>
+                        <div id="sendNoMsg" class="alert alert-warning alert-dismissable" style="display: none;">
+                            <strong>错误：</strong> <span>短信验证码发送失败</span>
                         </div>
                     </div>
+                    <div class="modal-footer">
+                        <button id="verify-code" type="submit" class="btn btn-primary ">确认</button>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
     {% else %}
-        <button type="button" class="btn btn-danger btn-secondary">已经核销</button>
+        <button type="button" class="btn btn-warning btn-secondary" disabled>已经核销</button>
     {% endif %}
 </div>
 
 {% compress js %}
-    <script type="text/javascript" src="{% static 'app/js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app/js/jquery-3.3.1.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'app/js/popper.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'app/bootstrap_4/js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'app/magnific_popup/jquery.magnific-popup.min.js' %}"></script>
@@ -297,6 +354,72 @@
                 enabled: true,
             }
         });
+        $.ajaxSetup({
+            data: {csrfmiddlewaretoken: '{{ csrf_token }}'}
+        });
+
+        $('#he-xiao-btn').click(function () {
+            var local_phone = localStorage.getItem('phone');
+            if (local_phone) {
+                $('#hx-model').modal('show');
+            } else {
+                $('#vc-model').modal('show');
+            }
+        });
+
+        $('#get-verify-code').click(function () {
+            var phone = $('#inputPhone1').val();
+            if ($.trim(phone)) {
+                $.post('{% url "app:get-verify-code" %}', {phone: phone}, function (result) {
+                    result = JSON.parse(result);
+                    {#console.log(result.Message);#}
+                    {#console.log(result.Code);#}
+                    if (result.Code === 'OK') {
+                        $('#sendOkMsg').show();
+                    } else {
+                        $('#sendNoMsg').children('span').text(result.Message).parent().show();
+                    }
+                });
+            } else {
+                $('#sendNoMsg').children('span').text('请输入手机号').parent().show();
+            }
+        });
+
+        $('#verify-code').click(function () {
+            var vc = $('#inputVerifyCode1').val();
+            if ($.trim(vc)) {
+                $.post('{% url "app:verify-code" %}', {vc: vc}, function (result) {
+                    {#result = JSON.parse(result);#}
+                    {#console.log(result.Message);#}
+                    {#console.log(result.Code);#}
+                    if (result.status) {
+                        $('#vc-model').modal('hide');
+                        var phone = $('#inputPhone1').val();
+                        localStorage.setItem('phone', phone);
+                        $('#hx-model').modal('show');
+                    } else {
+                        $('#sendNoMsg').children('span').text(result.msg).parent().show();
+                    }
+                });
+            } else {
+                $('#sendNoMsg').children('span').text('请输入验证码').parent().show();
+            }
+        });
+
+        $('#cancel-vc').click(function () {
+            $('#hx-model').modal('hide');
+        });
+
+        {#$('#submit-vc').click(function () {#}
+        {#    var id = '{{ wi.pk }}';#}
+        {#    var vc = $('#inputVerifyCode2').val();#}
+        {#    console.log(id);#}
+        {#    console.log(vc);#}
+        {#    $.post('{% url "app:he-xiao" %}', {id: id, vc: vc}, function (result) {#}
+        {##}
+        {#    });#}
+        {##}
+
     </script>
 {% endcompress %}
 

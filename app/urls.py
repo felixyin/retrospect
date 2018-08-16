@@ -22,5 +22,10 @@ app_name = 'app'
 urlpatterns = [
     # 富文本编辑器
     path(r'^ckeditor/', include('ckeditor_uploader.urls')),
-    path(r's/<uuid:id>', v.wine_item, name='wine-item-detail')
+    path(r's/<uuid:id>', v.wine_item, name='wine-item-detail'),
+    path(r'gvc/', v.get_verify_code, name='get-verify-code'),
+    path(r'vc/', v.verify_code, name='verify-code'),
+    path(r'hx/', v.he_xiao, name='he-xiao'),
+
+
 ]
