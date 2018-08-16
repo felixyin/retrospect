@@ -9,6 +9,10 @@ tar -czvf  /root/backup/media-${send}.tar.gz /root/retrospect/media/
 
 cd /root/retrospect
 
+git fetch --all
+
+git reset --hard origin/master
+
 git pull
 
 python manage.py collectstatic
