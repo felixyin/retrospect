@@ -7,7 +7,6 @@ from django.urls import reverse
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
-import retrospect.settings as SETTINGS
 from .models import *
 
 
@@ -26,7 +25,7 @@ class WineAdmin(admin.ModelAdmin):
 
 
 class HomeAttachAdmin(admin.ModelAdmin):
-    list_display = ['pk','banner', ]
+    list_display = ['pk', 'banner', ]
 
 
 # 按规则计算瓶身编码
@@ -57,6 +56,8 @@ def veri_code():
 
 # 生成核销信息
 def gen_wine_items(modeladmin, request, queryset):
+    from django.contrib.sites.models import Site
+    site = Site.objects.get_current().domain
     row_list = queryset.all()
     for row in row_list:
         count = row.count
@@ -73,7 +74,7 @@ def gen_wine_items(modeladmin, request, queryset):
                 wc = get_next_wine_code(max_wine_code)  # 核销编号
                 max_wine_code += 1
                 _id = str(uuid.uuid4())  # id、url加密
-                url = SETTINGS.DJANGO_SHORT_URL_REDIRECT_URL + reverse('app:wine-item-detail', kwargs={'id': _id, })  # 二维码url
+                url = site + reverse('app:wine-item-detail', kwargs={'id': _id, })  # 二维码url
                 WineItem.objects.create(id=_id, wine_code=wc, security_code=sc, url=url, created_time=now(), batch_id=pk)
 
             queryset.update(is_gen=True)  # 生成完毕，更新匹配生成状态
