@@ -7,6 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dc5f8f8c-6c0f-4dc3-9fe7-db3d84bb5e92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,18 +63,18 @@
         <counts>
           <entry key="conf" value="163" />
           <entry key="dummy" value="4" />
-          <entry key="gitignore" value="51" />
+          <entry key="gitignore" value="79" />
           <entry key="html" value="3080" />
           <entry key="py" value="8785" />
           <entry key="scss" value="1087" />
-          <entry key="txt" value="14" />
+          <entry key="txt" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="2" />
           <entry key="HTML" value="3078" />
-          <entry key="PLAIN_TEXT" value="232" />
+          <entry key="PLAIN_TEXT" value="268" />
           <entry key="Python" value="8140" />
           <entry key="SCSS" value="1087" />
           <entry key="Scratch" value="645" />
@@ -98,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="545">
+              <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
             </state>
           </provider>
         </entry>
@@ -234,6 +235,11 @@
           <expand>
             <path>
               <item name="retrospect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="retrospect" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="retrospect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="retrospect" type="462c0819:PsiDirectoryNode" />
               <item name="retrospect" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -402,14 +408,21 @@
       <option name="project" value="LOCAL" />
       <updated>1533738192113</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="忽略idea文件">
+      <created>1534412164891</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1534412164892</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="971" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -423,7 +436,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32992035" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50183153" side_tool="true" weight="0.24459614" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4981685" visible="true" weight="0.261661" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4981685" visible="true" weight="0.261661" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -467,7 +480,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="忽略idea文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="忽略idea文件" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -823,8 +837,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="545">
+          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
         </state>
       </provider>
     </entry>

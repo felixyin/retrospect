@@ -106,3 +106,4 @@ venv.bak/
 media/
 collectstatic/
 .idea/
+retrospect/settings.py
