@@ -1,0 +1,117 @@
+$color: #9c3328;
+$fontSize: 35px;
+$tabFontSize: 45px;
+$titleFontSize: 45px;
+$heXiaoBtnFontSize: 40px;
+
+html, body {
+  width: 100%!important;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  .banner {
+    img {
+      width: 100%;
+    }
+  }
+  .title {
+    height: 180px;
+    background-image: url("../img/title_bg.png");
+    background-repeat: no-repeat;
+    div {
+      margin: 0 auto;
+      line-height: 180px;
+      text-align: center;
+      font-size: $titleFontSize;
+      color: #474949;
+      font-weight: bold;
+      font-family: "Microsoft YaHei", "微软雅黑", Helvetica, Tahoma, STXihei, "华文细黑", STHeiti, "Helvetica Neue", Helvetica, Tahoma, "Droid Sans", "wenquanyi micro hei", FreeSans, Arimo, Arial, SimSun, "宋体", Heiti, "黑体", sans-serif;
+    }
+    span {
+      position: relative;
+      float: right;
+      right: 25%;
+      top: -50px;
+      font-size: 22px;
+    }
+  }
+}
+
+.tab-container {
+  margin-top: 8px;
+  display: flex;
+  .tab-item {
+    flex: 1;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    font-size: $tabFontSize;
+    border-right: 1px solid #474949;
+  }
+  .tab-item:last-child {
+    border-right: 0;
+  }
+}
+
+.prod-container {
+  font-size: $fontSize;
+}
+
+#tab-content {
+  .prod-container {
+    display: none;
+  }
+  .prod-container:first-child {
+    display: block;
+  }
+}
+
+.he-xiao {
+  text-align: center;
+  button {
+    width: 50%;
+    height: 75px;
+    line-height: 65px;
+    background-color: #C72B07;
+    color: white;
+    margin: 0 auto;
+    font-size: $heXiaoBtnFontSize;
+  }
+}
+
+.he-xiao-over {
+  @extend .he-xiao;
+  button {
+    background-color: #474949;
+  }
+}
+
+.clicked {
+  color: $color;
+}
+
+.time {
+  color: $color;
+}
+
+.store {
+  color: $color;
+  border: 2px solid $color;
+}
+
+
+
+.my-banner{
+  padding-left: 0;
+  padding-right: 0;
+  .row{
+    padding: 0;
+    .col-sm{
+      padding: 0;
+    }
+  }
+}

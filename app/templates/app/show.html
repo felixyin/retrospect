@@ -1,0 +1,205 @@
+{% load static %}
+{% load compress %}
+{% load app_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    {% compress css %}
+        <link rel="stylesheet" href="{% static 'app/bootstrap_4/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/show.css' %}">
+    {% endcompress %}
+
+</head>
+<body>
+
+<div class="container my-banner">
+    <div class="row">
+        <div class="col-sm">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    {% for banner in banners %}
+                        <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.counter0 }}" class=" {% if forloop.first %} active {% endif %}"></li>
+                    {% endfor %}
+                </ol>
+                <div class="carousel-inner">
+                    {% for banner in banners %}
+                        <div class="carousel-item  {% if forloop.first %} active {% endif %} ">
+                            <img class="d-block w-100" src="{{ banner.banner.url }}">
+                        </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="flex-container">
+    <div class="title">
+        <div>{{ wi.batch.wine.name }}</div>
+        <span>瓶身编号:823823872</span>
+    </div>
+</div>
+
+<div class="tab-container">
+    <div class="tab-item clicked">产品信息</div>
+    <div class="tab-item">醒酒信息</div>
+    <div class="tab-item">追溯信息</div>
+</div>
+<hr>
+<div id="tab-content">
+    <div class="prod-container">
+        <div class="info-item">
+            <div class="info-title">产地:{{ wi.batch.wine.area_name }}</div>
+{#            <img class="info-img" src="{{ wi.batch.wine.area.url }}"/>#}
+        </div>
+        <div class="info-item">
+            <div class="info-title">酒庄:{{ wi.batch.wine.chateau_name }}</div>
+{#            <img class="info-img" src="{{ wi.batch.wine.chateau.url }}"/>#}
+        </div>
+        <div class="info-item">
+            <div class="info-title">产品介绍</div>
+            <div class="info-content">
+                {{ wi.batch.wine.description | custom_markdown }}
+            </div>
+        </div>
+        <div class="info-item">
+            <div class="info-title">产品特点</div>
+            <div class="info-content">
+                {{ wi.batch.wine.feature | custom_markdown }}
+            </div>
+        </div>
+    </div>
+    <div class="prod-container">
+        <p>
+            该产品醒酒时间大约在<span class="time">{{ wi.batch.wine.sober_up_time_best }}min</span>
+        </p>
+        <p>
+            醒酒<span class="time">{{ wi.batch.wine.sober_up_time1 }}min</span>左右:{{ wi.batch.wine.sober_up_taste1 }}
+        </p>
+        <p>
+            醒酒<span class="time">{{ wi.batch.wine.sober_up_time2 }}min</span>左右:{{ wi.batch.wine.sober_up_taste2 }}
+        </p>
+        <p>
+            醒酒<span class="time">{{ wi.batch.wine.sober_up_time3 }}min</span>左右:{{ wi.batch.wine.sober_up_taste3 }}
+        </p>
+        <p>
+            该产品醒酒不宜超过<span class="time">{{ wi.batch.wine.sober_up_time_worst }}min</span>
+        </p>
+        <p>
+            开瓶后应<span class="store">{{ wi.batch.wine.storage_mode }}</span>方式存放
+        </p>
+    </div>
+    <div class="prod-container">
+        nothing
+    </div>
+</div>
+
+{% if wi.status == 'w' %}
+    <div class="he-xiao">
+        <button>一键核销</button>
+    </div>
+{% else %}
+    <div class="he-xiao-over">
+        <button>已经核销</button>
+    </div>
+{% endif %}
+
+<div style="display: none;">
+
+    PK:{{ wi.id }}
+    <br>
+    核销编码:{{ wi.wine_code }}
+    <br>
+    验证码:{{ wi.security_code }}
+    <br>
+    是否已经核销：{{ wi.status }}
+    <br>
+    第几次访问？:{{ wi.count }}
+    <br>
+    创建时间:{{ wi.created_time }}
+    <br>
+    第一次访问时间:{{ wi.first_visit_time }}
+    <br>
+    最后一次访问时间:{{ wi.last_visit_time }}
+    <br>
+    二维码地址:{{ wi.url }}
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    批次:{{ wi.batch }}
+    <br>
+    批次编号:{{ wi.batch.batch_code }}
+    <br>
+    生成数量:{{ wi.batch.count }}
+    <br>
+    已经生成?:{{ wi.batch.is_gen }}
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    产品：{{ wi.batch.wine }}
+    <br>
+    名称:{{ wi.batch.wine.name }}
+    <br>
+    产品介绍:{{ wi.batch.wine.description }}
+    <br>
+    产品特点:{{ wi.batch.wine.feature }}
+    <br>
+    酒庄介绍:<img src="{{ wi.batch.wine.chateau.url }}" style="width: 20%;">
+    <br>
+    产区介绍:<img src="{{ wi.batch.wine.area.url }}" style="width: 20%;">
+    <br>
+    最佳醒酒时间:{{ wi.batch.wine.sober_up_time_best }}
+    <br>
+    醒酒时间1:{{ wi.batch.wine.sober_up_time1 }}
+    <br>
+    口感1:{{ wi.batch.wine.sober_up_taste1 }}
+    <br>
+    醒酒时间1:{{ wi.batch.wine.sober_up_time2 }}
+    <br>
+    口感2:{{ wi.batch.wine.sober_up_taste2 }}
+    <br>
+    醒酒时间3:{{ wi.batch.wine.sober_up_time3 }}
+    <br>
+    口感3:{{ wi.batch.wine.sober_up_taste3 }}
+    <br>
+    不易超过醒酒时间:{{ wi.batch.wine.sober_up_time_worst }}
+    <br>
+    存放方式:{{ wi.batch.wine.storage_mode }}
+
+</div>
+{% compress js %}
+    <script type="text/javascript" src="{% static 'app/js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app/js/popper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app/bootstrap_4/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app/js/zepto.min.js' %}"></script>
+    <script type="text/javascript">
+        var tabs = $('.tab-container').children();
+        var tab_contents = $('#tab-content').children();
+        tabs.click(function () {
+            tabs.removeClass('clicked');
+            $(tab_contents.hide().get($(this).addClass('clicked').index())).show();
+        });
+    </script>
+{% endcompress %}
+
+</body>
+</html>
