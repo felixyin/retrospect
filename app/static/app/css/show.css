@@ -3,33 +3,49 @@ html, body {
   padding: 0 !important;
   width: 100% !important; }
 
-.my-container .row {
-  padding: 0; }
-  .my-container .row .col-sm {
+.my-container {
+  background-color: #F7F7F7; }
+  .my-container .row {
     padding: 0; }
+    .my-container .row .col-sm {
+      padding: 0; }
 
-.he-xiao, .he-xiao-ok, .he-xiao-not {
+.he-xiao, .he-xiao-ok .my-title, .he-xiao-not .my-title {
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center; }
 
-.he-xiao-ok {
+.he-xiao-ok .my-title {
   background-image: url("/static/app/img/ok-hexiao.jpg"); }
+.he-xiao-ok .my-wine-code span {
+  border-bottom: 1px solid #418F08; }
 
-.he-xiao-not {
+.he-xiao-not .my-title {
   background-image: url("/static/app/img/not-hexiao.jpg"); }
+.he-xiao-not .my-wine-code span {
+  border-bottom: 1px solid #C72B07; }
 
 .my-title {
   height: 100px;
   background-color: #F7F7F7; }
   .my-title div {
     color: white; }
-  .my-title .my-wine-code {
-    float: right;
-    top: 40px;
-    color: black;
-    font-size: 10px;
-    left: 57%; }
+
+.my-wine-code {
+  position: relative;
+  height: 15px;
+  float: right;
+  top: -25px;
+  color: black;
+  font-size: 10px;
+  left: -17%;
+  z-index: 100000; }
+  .my-wine-code span {
+    margin-top: 6px;
+    height: 2px;
+    width: 50px; }
+  .my-wine-code p {
+    margin-left: 4px; }
 
 .my-tab {
   height: 52px;
@@ -68,6 +84,19 @@ html, body {
     .tab-pane .info-item .info-content p, .tab-pane .retrospect-item .info-content p {
       color: #454545;
       margin-bottom: 0; }
+  .tab-pane .retrospect-item .info-title {
+    border-bottom: 2px solid #C82908;
+    display: inline-block; }
+  .tab-pane .retrospect-item p {
+    color: #676767;
+    margin-bottom: 2px; }
+    .tab-pane .retrospect-item p .my-img-open {
+      color: #C82908;
+      border: 1px solid #C82908;
+      padding-left: 2px;
+      padding-right: 2px;
+      margin-left: 4px;
+      margin-right: 4px; }
 
 .my-btn {
   background-color: #F7F7F7;

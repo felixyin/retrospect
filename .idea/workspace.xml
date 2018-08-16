@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc5f8f8c-6c0f-4dc3-9fe7-db3d84bb5e92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/static/app/magnific_popup/jquery.magnific-popup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/app/magnific_popup/jquery.magnific-popup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/app/magnific_popup/magnific-popup.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/app/css/show.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/app/css/show.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/app/css/show.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/app/img/not-hexiao.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/img/not-hexiao.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/app/img/ok-hexiao.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/img/ok-hexiao.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/app/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/show.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,23 +73,23 @@
           <entry key="conf" value="193" />
           <entry key="dummy" value="4" />
           <entry key="gitignore" value="79" />
-          <entry key="html" value="4074" />
+          <entry key="html" value="4519" />
           <entry key="ini" value="69" />
           <entry key="py" value="9146" />
-          <entry key="scss" value="2189" />
+          <entry key="scss" value="2501" />
           <entry key="sh" value="157" />
-          <entry key="txt" value="64" />
+          <entry key="txt" value="73" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="157" />
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="4072" />
+          <entry key="HTML" value="4517" />
           <entry key="Ini" value="69" />
-          <entry key="PLAIN_TEXT" value="340" />
+          <entry key="PLAIN_TEXT" value="349" />
           <entry key="Python" value="8501" />
-          <entry key="SCSS" value="2189" />
+          <entry key="SCSS" value="2501" />
           <entry key="Scratch" value="645" />
         </counts>
       </usages-collector>
@@ -95,20 +97,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2109">
-              <caret line="111" selection-start-line="111" selection-end-line="111" />
+            <state relative-caret-position="193">
+              <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="123" column="104" selection-start-line="123" selection-start-column="104" selection-end-line="123" selection-end-column="104" />
+            <state relative-caret-position="221">
+              <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+              <folding>
+                <element signature="n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+            <state relative-caret-position="204">
+              <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <marker date="1534433674124" expanded="true" signature="828:2001" ph="..." />
@@ -151,7 +156,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>AUTH_USER_MODEL</find>
       <find>app.ws</find>
       <find>blog</find>
       <find>restr</find>
@@ -181,12 +185,14 @@
       <find>sqlmigrate</find>
       <find>wine_co</find>
       <find>carouselArea</find>
+      <find>backgrou</find>
     </findStrings>
     <replaceStrings>
       <replace>m.</replace>
       <replace>RichTextFormField</replace>
       <replace>pub_date</replace>
       <replace>carouselChateau</replace>
+      <replace>carouselArea2</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/extra_apps/suit</dir>
@@ -223,10 +229,10 @@
         <option value="$PROJECT_DIR$/uwsgi.ini" />
         <option value="$PROJECT_DIR$/retrospect_nginx.conf" />
         <option value="$PROJECT_DIR$/update.sh" />
-        <option value="$PROJECT_DIR$/app/static/app/css/show.scss" />
         <option value="$PROJECT_DIR$/app/admin.py" />
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/app/templates/app/show.html" />
+        <option value="$PROJECT_DIR$/app/static/app/css/show.scss" />
       </list>
     </option>
   </component>
@@ -565,19 +571,26 @@
       <option name="project" value="LOCAL" />
       <updated>1534437938977</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="图片弹框显示">
+      <created>1534441005205</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1534441005205</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="971" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4981685" visible="true" weight="0.24459614" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4981685" visible="true" weight="0.24459614" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4993895" weight="0.3208191" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -648,7 +661,8 @@
     <MESSAGE value="样式编写" />
     <MESSAGE value="追溯信息骨架" />
     <MESSAGE value="轮播图" />
-    <option name="LAST_COMMIT_MESSAGE" value="轮播图" />
+    <MESSAGE value="图片弹框显示" />
+    <option name="LAST_COMMIT_MESSAGE" value="图片弹框显示" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -937,13 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2109">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -967,8 +974,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        <state relative-caret-position="204">
+          <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <marker date="1534433674124" expanded="true" signature="828:2001" ph="..." />
@@ -979,8 +986,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="123" column="104" selection-start-line="123" selection-start-column="104" selection-end-line="123" selection-end-column="104" />
+        <state relative-caret-position="221">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
         </state>
       </provider>
     </entry>
