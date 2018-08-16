@@ -27,5 +27,7 @@ killall -9 uwsgi
 
 nohup uwsgi --ini uwsgi.ini & ls
 
-ls
+ps -ef | grep uwsgi
+
+
 
