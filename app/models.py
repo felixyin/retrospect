@@ -149,12 +149,26 @@ class WineItem(m.Model):
     batch = m.ForeignKey(Batch, on_delete=m.CASCADE, editable=False)
     url = m.URLField('二维码地址', null=False, default=None)
 
+    w_user = m.ForeignKey('WineUser', on_delete=m.DO_NOTHING, null=True, editable=False)
+
     def __str__(self):
         return self.wine_code
 
     class Meta:
         ordering = ['-wine_code', ]
         verbose_name = "核销"
+        verbose_name_plural = verbose_name
+
+
+class WineUser(m.Model):
+    phone = m.CharField('手机号', max_length=15, blank=False)
+    wechat_id = m.CharField('微信id', max_length=30, blank=True)
+
+    def __str__(self):
+        return self.phone + ',' + self.wechat_id
+
+    class Meta:
+        verbose_name = "客户"
         verbose_name_plural = verbose_name
 
 

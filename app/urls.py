@@ -27,5 +27,4 @@ urlpatterns = [
     path(r'vc/', v.verify_code, name='verify-code'),
     path(r'hx/', v.he_xiao, name='he-xiao'),
 
-
 ]

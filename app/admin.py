@@ -1,4 +1,3 @@
-import random
 import time
 
 from django.contrib import admin
@@ -6,8 +5,9 @@ from django.shortcuts import redirect
 from django.urls import reverse
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
-from .util import *
+
 from .models import *
+from .util import *
 
 
 # Register your models here.
@@ -42,7 +42,6 @@ def get_next_wine_code(max_code: int):
     max_code_str = str(max_code)
     end = max_code_str.zfill(6)
     return "{0}{1}".format(begin, end)
-
 
 
 # 生成核销信息
@@ -104,10 +103,15 @@ class WineItemResource(resources.ModelResource):
 class WineItemAdmin(ImportExportModelAdmin):
     resource_class = WineItemResource
     search_fields = ('wine_code', 'security_code', 'batch',)
-    list_display = ('wine_code', 'security_code', 'batch', 'status', 'count', 'first_visit_time', 'last_visit_time')
+    list_display = ('wine_code', 'security_code', 'batch', 'w_user', 'status', 'count', 'first_visit_time', 'last_visit_time')
     list_filter = ('status', 'batch',)
     exclude = ('created_time',)
     sortable_by = ('-created_time',)
+
+
+class WineUserAdmin(admin.ModelAdmin):
+    search_fields = ('phone', 'wechat_id',)
+    list_display = ('phone', 'wechat_id',)
 
 
 class ActivityAdmin(admin.ModelAdmin):
@@ -119,4 +123,5 @@ admin.site.register(Wine, WineAdmin)
 admin.site.register(HomeAttach, HomeAttachAdmin)
 admin.site.register(Batch, BatchAdmin)
 admin.site.register(WineItem, WineItemAdmin)
+admin.site.register(WineUser, WineUserAdmin)
 admin.site.register(Activity, ActivityAdmin)

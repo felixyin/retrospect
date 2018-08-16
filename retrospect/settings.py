@@ -384,6 +384,7 @@ SUIT_CONFIG = {
                 {'label': u'批次管理', 'model': 'app.Batch'},
                 {'label': u'核销管理', 'url': 'app.WineItem'},
                 {'label': u'活动管理', 'url': 'app.Activity'},
+                {'label': u'客户管理', 'url': 'app.WineUser'},
             )
          },
         {'label': u'网站设置', 'icon': 'icon-cog', 'models':
@@ -391,7 +392,7 @@ SUIT_CONFIG = {
                 {'label': u'域名设置', 'model': 'sites.site'},
                 {'label': u'轮播图设置', 'model': 'app.HomeAttach'},
                 {'label': u'组管理', 'model': 'auth.group'},
-                {'label': u'用户管理', 'model': 'auth.user'},
+                {'label': u'系统用户管理', 'model': 'auth.user'},
             )
          },
     ),

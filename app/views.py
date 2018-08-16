@@ -15,6 +15,7 @@ class WineItemDetailView(DetailView):
     model = WineItem
 
 
+# 扫码查看
 def wine_item(request, id):
     wi = get_object_or_404(WineItem, id=id)
     wi.count += 1
@@ -25,6 +26,8 @@ def wine_item(request, id):
 
     banners = HomeAttach.objects.all()
 
+    # hx_status = request.session.get('hx_status')
+
     return render(request, 'app/show.html', {'wi': wi, 'banners': banners})
 
 
@@ -32,13 +35,10 @@ def wine_item(request, id):
 def get_verify_code(request):
     if request.is_ajax():
         phone = request.POST.get('phone')
-        print(phone)
 
         __business_id = uuid.uuid1()
-        print(__business_id)
         vc = str(veri_code())
         request.session['vc'] = vc
-        print(vc)
 
         params = "{\"code\":\"" + vc + "\",\"product\":\"xx\"}"
         result = {'Code': 'OK'}
@@ -47,8 +47,6 @@ def get_verify_code(request):
         except Exception as e:
             pass
 
-        print(result)
-
         return HttpResponse(result)
         # return HttpResponse(json.dumps({'result': result}))
         # return JsonResponse({'phone': phone, 'status': result.Code})
@@ -56,11 +54,17 @@ def get_verify_code(request):
 
 # 校验验证码
 def verify_code(request):
-    vc = request.session['vc']
-    print(vc)
+    vc = request.session.get('vc')
     p_vc = request.POST['vc']
     if vc == p_vc:
-        # // todo 记录数据库
+        # 验证成功，第一次则写入数据库
+        wine_item_id = request.POST['wine_item_id']
+        wechat_id = request.POST['wechat_id']
+        phone = request.POST['phone']
+        (wu, is_created,) = WineUser.objects.get_or_create(phone=phone, wechat_id=wechat_id)
+        wi = WineItem.objects.get(id__exact=wine_item_id)
+        wi.w_user = wu
+        wi.save()
         return JsonResponse({'status': True, 'msg': ''})
     return JsonResponse({'status': False, 'msg': '验证码不匹配'})
 
@@ -69,12 +73,13 @@ def verify_code(request):
 def he_xiao(request):
     id = request.POST.get('id')
     security_code = request.POST.get('security_code')
-    print(id)
-    print(security_code)
 
     wi = WineItem.objects.get(id__exact=id)
     if wi.security_code == security_code:
         wi.status = 'y'
         wi.save()
+        # request.session['hx_status'] = '核销成功'
+    # else:
+    #     request.session['hx_status'] = '核销失败'
 
     return redirect(reverse('app:wine-item-detail', kwargs={'id': id}))

@@ -387,8 +387,15 @@
 
         $('#verify-code').click(function () {
             var vc = $('#inputVerifyCode1').val();
+            var phone = $('#inputPhone1').val();
             if ($.trim(vc)) {
-                $.post('{% url "app:verify-code" %}', {vc: vc}, function (result) {
+                $.post('{% url "app:verify-code" %}', {
+                    {# TODO 集成微信#}
+                    wechat_id: '# TODO',
+                    wine_item_id: '{{ wi.id }}',
+                    phone: phone,
+                    vc: vc
+                }, function (result) {
                     {#result = JSON.parse(result);#}
                     {#console.log(result.Message);#}
                     {#console.log(result.Code);#}
@@ -420,6 +427,10 @@
         {#    });#}
         {##}
 
+        var hx_status = '{{ wi.hx_status }}';
+        if (hx_status) {
+            alert(hx_status);
+        }
     </script>
 {% endcompress %}
 
