@@ -74,11 +74,65 @@
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="info-item">
                 <div class="info-title">产地:{{ wi.batch.wine.area_name }}</div>
-                <img class="info-img" src="{{ wi.batch.wine.area.url }}"/>
+{#                <img class="info-img" src="{{ wi.batch.wine.area.url }}"/>#}
+                <div class="row">
+                    <div class="col-sm">
+                        <div id="carouselArea" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                {% for areaAttach in wi.batch.wine.areaattach_set.all %}
+                                    <li data-target="#carouselArea" data-slide-to="{{ forloop.counter0 }}"
+                                        class=" {% if forloop.first %} active {% endif %}"></li>
+                                {% endfor %}
+                            </ol>
+                            <div class="carousel-inner">
+                                {% for areaAttach in wi.batch.wine.areaattach_set.all %}
+                                    <div class="carousel-item  {% if forloop.first %} active {% endif %} ">
+                                        <img class="d-block w-100" src="{{ areaAttach.img.url }}">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselArea" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselArea" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="info-item">
                 <div class="info-title">酒庄:{{ wi.batch.wine.chateau_name }}</div>
-                <img class="info-img" src="{{ wi.batch.wine.chateau.url }}"/>
+{#                <img class="info-img" src="{{ wi.batch.wine.chateau.url }}"/>#}
+                <div class="row">
+                    <div class="col-sm">
+                        <div id="carouselChateau" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                {% for areaAttach in wi.batch.wine.chateauattach_set.all %}
+                                    <li data-target="#carouselChateau" data-slide-to="{{ forloop.counter0 }}"
+                                        class=" {% if forloop.first %} active {% endif %}"></li>
+                                {% endfor %}
+                            </ol>
+                            <div class="carousel-inner">
+                                {% for areaAttach in wi.batch.wine.chateauattach_set.all %}
+                                    <div class="carousel-item  {% if forloop.first %} active {% endif %} ">
+                                        <img class="d-block w-100" src="{{ areaAttach.img.url }}">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselChateau" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselChateau" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="info-item">
                 <div class="info-title">产品介绍</div>
