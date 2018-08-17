@@ -81,7 +81,7 @@
     <div class="tab-content" id="myTabContent" style="padding: 15px;">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="info-item">
-                <div class="info-title">产地:{{ wi.batch.wine.area_name }}</div>
+                <div class="info-title"><span>产地:</span>{{ wi.batch.wine.area_name }}</div>
                 <div class="row">
                     <div class="col-sm">
                         <div id="carouselArea" class="carousel slide" data-ride="carousel">
@@ -113,7 +113,7 @@
                 </div>
             </div>
             <div class="info-item">
-                <div class="info-title">酒庄:{{ wi.batch.wine.chateau_name }}</div>
+                <div class="info-title"><span>酒庄:</span>{{ wi.batch.wine.chateau_name }}</div>
                 <div class="row">
                     <div class="col-sm">
                         <div id="carouselChateau" class="carousel slide" data-ride="carousel">
@@ -145,13 +145,13 @@
                 </div>
             </div>
             <div class="info-item">
-                <div class="info-title">产品介绍</div>
+                <div class="info-title"><span>产品介绍</span></div>
                 <div class="info-content">
                     {{ wi.batch.wine.description | custom_markdown }}
                 </div>
             </div>
             <div class="info-item">
-                <div class="info-title">产品特点</div>
+                <div class="info-title"><span>产品特点</span></div>
                 <div class="info-content">
                     {{ wi.batch.wine.feature | custom_markdown }}
                 </div>

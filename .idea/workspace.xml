@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/app/static/app/css/show.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/static/app/css/show.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/static/app/css/show.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/app/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/show.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,23 +77,23 @@
           <entry key="conf" value="193" />
           <entry key="dummy" value="4" />
           <entry key="gitignore" value="79" />
-          <entry key="html" value="7262" />
+          <entry key="html" value="7380" />
           <entry key="ini" value="69" />
           <entry key="py" value="11763" />
-          <entry key="scss" value="2644" />
+          <entry key="scss" value="2686" />
           <entry key="sh" value="432" />
-          <entry key="txt" value="133" />
+          <entry key="txt" value="142" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="432" />
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="7260" />
+          <entry key="HTML" value="7378" />
           <entry key="Ini" value="69" />
-          <entry key="PLAIN_TEXT" value="409" />
+          <entry key="PLAIN_TEXT" value="418" />
           <entry key="Python" value="11118" />
-          <entry key="SCSS" value="2644" />
+          <entry key="SCSS" value="2686" />
           <entry key="Scratch" value="645" />
         </counts>
       </usages-collector>
@@ -112,20 +113,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
+            <state relative-caret-position="331">
+              <caret line="128" selection-start-line="128" selection-end-line="128" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6916">
-              <caret line="364" column="41" selection-start-line="364" selection-start-column="41" selection-end-line="364" selection-end-column="41" />
+            <state relative-caret-position="394">
+              <caret line="153" column="56" selection-start-line="153" selection-start-column="56" selection-end-line="153" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -219,9 +220,9 @@
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/retrospect/settings.py" />
         <option value="$PROJECT_DIR$/update.sh" />
-        <option value="$PROJECT_DIR$/app/templates/app/show.html" />
         <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/static/app/css/show.scss" />
+        <option value="$PROJECT_DIR$/app/templates/app/show.html" />
       </list>
     </option>
   </component>
@@ -671,7 +672,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534484422792</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="增加下划线">
+      <created>1534485703962</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1534485703962</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -762,7 +770,8 @@
     <MESSAGE value="自动判断服务器，启用不同配置文件" />
     <MESSAGE value="一键部署优化" />
     <MESSAGE value="核销关联客户" />
-    <option name="LAST_COMMIT_MESSAGE" value="核销关联客户" />
+    <MESSAGE value="增加下划线" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加下划线" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1029,6 +1038,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="157" column="32" lean-forward="true" selection-start-line="157" selection-start-column="32" selection-end-line="157" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1534457139145" expanded="true" signature="828:2001" ph="..." />
+            <marker date="1534457139145" expanded="true" signature="1194:2001" ph="..." />
+            <marker date="1534457139145" expanded="true" signature="6233:6519" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,6 +1051,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <element signature="e#634#671#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1096,17 +1114,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
+    <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6916">
-          <caret line="364" column="41" selection-start-line="364" selection-start-column="41" selection-end-line="364" selection-end-column="41" />
+        <state relative-caret-position="331">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
+    <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
+        <state relative-caret-position="394">
+          <caret line="153" column="56" selection-start-line="153" selection-start-column="56" selection-end-line="153" selection-end-column="56" />
         </state>
       </provider>
     </entry>
