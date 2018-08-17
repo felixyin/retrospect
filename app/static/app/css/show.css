@@ -131,4 +131,30 @@ html, body {
 .modal-backdrop {
   z-index: 10 !important; }
 
+.modal-content .modal-header {
+  background-color: #AB0000; }
+  .modal-content .modal-header .modal-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: white; }
+.modal-content .modal-body .form-group {
+  margin-bottom: 0;
+  font-size: 14px; }
+  .modal-content .modal-body .form-group input {
+    margin-top: 8px;
+    text-align: center; }
+  .modal-content .modal-body .form-group input::-ms-input-placeholder {
+    text-align: center; }
+  .modal-content .modal-body .form-group input::-webkit-input-placeholder {
+    text-align: center; }
+.modal-content .modal-footer {
+  display: flex; }
+  .modal-content .modal-footer button {
+    flex: 3;
+    border-radius: 0;
+    line-height: 1.1;
+    background-color: #CE3105; }
+  .modal-content .modal-footer span {
+    flex: 1; }
+
 /*# sourceMappingURL=show.css.map */

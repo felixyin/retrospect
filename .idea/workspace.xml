@@ -77,10 +77,10 @@
           <entry key="conf" value="193" />
           <entry key="dummy" value="4" />
           <entry key="gitignore" value="79" />
-          <entry key="html" value="7380" />
+          <entry key="html" value="7544" />
           <entry key="ini" value="69" />
           <entry key="py" value="11763" />
-          <entry key="scss" value="2686" />
+          <entry key="scss" value="2908" />
           <entry key="sh" value="432" />
           <entry key="txt" value="142" />
         </counts>
@@ -89,11 +89,11 @@
         <counts>
           <entry key="Bash" value="432" />
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="7378" />
+          <entry key="HTML" value="7542" />
           <entry key="Ini" value="69" />
           <entry key="PLAIN_TEXT" value="418" />
           <entry key="Python" value="11118" />
-          <entry key="SCSS" value="2686" />
+          <entry key="SCSS" value="2908" />
           <entry key="Scratch" value="645" />
         </counts>
       </usages-collector>
@@ -116,8 +116,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="196">
+              <caret line="224" column="25" selection-start-line="224" selection-start-column="25" selection-end-line="224" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -125,8 +125,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="153" column="56" selection-start-line="153" selection-start-column="56" selection-end-line="153" selection-end-column="56" />
+            <state relative-caret-position="319">
+              <caret line="330" column="24" selection-start-line="330" selection-start-column="24" selection-end-line="330" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#div#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,7 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>restr</find>
       <find>app.wine</find>
       <find>auth.user</find>
       <find>app.</find>
@@ -173,6 +176,7 @@
       <find>backgrou</find>
       <find>z-index</find>
       <find>aliyunsdkcore</find>
+      <find>获得验证码</find>
     </findStrings>
     <replaceStrings>
       <replace>m.</replace>
@@ -679,7 +683,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534485703962</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="增加下划线">
+      <created>1534485940619</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1534485940619</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1116,15 +1127,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        <state relative-caret-position="196">
+          <caret line="224" column="25" selection-start-line="224" selection-start-column="25" selection-end-line="224" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="153" column="56" selection-start-line="153" selection-start-column="56" selection-end-line="153" selection-end-column="56" />
+        <state relative-caret-position="319">
+          <caret line="330" column="24" selection-start-line="330" selection-start-column="24" selection-end-line="330" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#div#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

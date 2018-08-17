@@ -268,9 +268,9 @@
                         <label class="col-12 col-form-label">4.关注微信公众号，随时获得活动信息</label>
                     </div>
                     <div class="form-group row">
-                        <div class="col-7 center-column">
-                            <input name="security_code" type="text" class="form-control" id="inputVerifyCode2"
-                                   placeholder="请输入验证码">
+                        <div class="col-7 center-column" style="margin: 0 auto;">
+                            <input name="security_code" type="number" class="form-control" id="inputVerifyCode2"
+                                   placeholder="请输入验证码" align="middle">
                         </div>
                     </div>
                     <div id="vcSuccess" class="alert alert-success alert-dismissable" style="display: none;">
@@ -281,8 +281,11 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button id="cancel-vc" type="button" class="btn btn-info ">取消</button>
-                    <button id="submit-vc" type="submit" class="btn btn-primary ">确认</button>
+                    <span></span>
+                    <button id="cancel-vc" type="button" class="btn btn-danger ">取消</button>
+                    <span></span>
+                    <button id="submit-vc" type="submit" class="btn btn-danger ">确认</button>
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -320,9 +323,10 @@
                                        placeholder="请输入验证码">
                             </div>
                             <button id="get-verify-code" type="button" class="btn btn-primary col-4 "
-                                    style="margin-left: 15px;">获得验证码
+                                    style="margin-left: 15px;margin-top: 7px;">获得验证码
                             </button>
                         </div>
+                        <br>
                         <div id="sendOkMsg" class="alert alert-success alert-dismissable" style="display: none;">
                             <strong>提示：</strong> 短信验证码已发送
                         </div>
@@ -377,6 +381,7 @@
                     {#console.log(result.Message);#}
                     {#console.log(result.Code);#}
                     if (result.Code === 'OK') {
+                        $('#sendNoMsg').hide();
                         $('#sendOkMsg').show();
                     } else {
                         $('#sendNoMsg').children('span').text(result.Message).parent().show();
