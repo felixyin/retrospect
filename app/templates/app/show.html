@@ -244,6 +244,7 @@
     <form action="{% url 'app:he-xiao' %}" method="post">
         {% csrf_token %}
         <input type="hidden" name="id" value="{{ wi.id }}">
+        <input type="hidden" id="phone_ls" name="phone">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -361,6 +362,7 @@
         $('#he-xiao-btn').click(function () {
             var local_phone = localStorage.getItem('phone');
             if (local_phone) {
+                $('#phone_ls').val(local_phone);
                 $('#hx-model').modal('show');
             } else {
                 $('#vc-model').modal('show');
@@ -403,6 +405,7 @@
                         $('#vc-model').modal('hide');
                         var phone = $('#inputPhone1').val();
                         localStorage.setItem('phone', phone);
+                        $('#phone_ls').val(phone);
                         $('#hx-model').modal('show');
                     } else {
                         $('#sendNoMsg').children('span').text(result.msg).parent().show();

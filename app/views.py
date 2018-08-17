@@ -73,9 +73,12 @@ def verify_code(request):
 def he_xiao(request):
     id = request.POST.get('id')
     security_code = request.POST.get('security_code')
+    phone = request.POST.get('phone')
 
     wi = WineItem.objects.get(id__exact=id)
     if wi.security_code == security_code:
+        wu = WineUser.objects.filter(phone=phone).all()[0]
+        wi.w_user = wu
         wi.status = 'y'
         wi.save()
         # request.session['hx_status'] = '核销成功'
