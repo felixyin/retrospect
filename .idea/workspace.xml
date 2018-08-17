@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="dc5f8f8c-6c0f-4dc3-9fe7-db3d84bb5e92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/app/css/show.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0002_auto_20180816_1210.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0003_auto_20180816_1212.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0004_auto_20180816_1213.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0005_auto_20180816_1227.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0006_auto_20180816_1231.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0007_auto_20180816_1318.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0008_auto_20180816_1319.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0009_auto_20180816_1342.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0010_auto_20180816_1425.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/static/app/css/show.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/static/app/css/show.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/app/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/show.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,16 +33,16 @@
     <session id="858079268">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -44,14 +51,14 @@
           <entry key="css" value="2" />
           <entry key="gitattributes" value="1" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="16" />
+          <entry key="html" value="17" />
           <entry key="ini" value="2" />
           <entry key="jpg" value="4" />
           <entry key="js" value="2" />
           <entry key="md" value="1" />
           <entry key="py" value="118" />
           <entry key="pyi" value="1" />
-          <entry key="scss" value="5" />
+          <entry key="scss" value="6" />
           <entry key="sh" value="9" />
           <entry key="txt" value="12" />
         </counts>
@@ -60,7 +67,7 @@
         <counts>
           <entry key="Bash" value="9" />
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="16" />
+          <entry key="HTML" value="17" />
           <entry key="Image" value="4" />
           <entry key="Ini" value="2" />
           <entry key="JavaScript" value="2" />
@@ -68,7 +75,7 @@
           <entry key="PLAIN_TEXT" value="18" />
           <entry key="Python" value="115" />
           <entry key="PythonStub" value="1" />
-          <entry key="SCSS" value="5" />
+          <entry key="SCSS" value="6" />
           <entry key="Scratch" value="3" />
         </counts>
       </usages-collector>
@@ -77,60 +84,44 @@
           <entry key="conf" value="193" />
           <entry key="dummy" value="4" />
           <entry key="gitignore" value="79" />
-          <entry key="html" value="7544" />
+          <entry key="html" value="7572" />
           <entry key="ini" value="69" />
           <entry key="py" value="11763" />
-          <entry key="scss" value="2908" />
+          <entry key="scss" value="2918" />
           <entry key="sh" value="432" />
-          <entry key="txt" value="142" />
+          <entry key="txt" value="148" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="432" />
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="7542" />
+          <entry key="HTML" value="7570" />
           <entry key="Ini" value="69" />
-          <entry key="PLAIN_TEXT" value="418" />
+          <entry key="PLAIN_TEXT" value="424" />
           <entry key="Python" value="11118" />
-          <entry key="SCSS" value="2908" />
+          <entry key="SCSS" value="2918" />
           <entry key="Scratch" value="645" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="791">
-              <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="224" column="25" selection-start-line="224" selection-start-column="25" selection-end-line="224" selection-end-column="25" />
+            <state relative-caret-position="202">
+              <caret line="182" column="19" selection-start-line="182" selection-start-column="19" selection-end-line="182" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="330" column="24" selection-start-line="330" selection-start-column="24" selection-end-line="330" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#div#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="211">
+              <caret line="159" column="43" selection-start-line="159" selection-start-column="43" selection-end-line="159" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -147,7 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>app.wine</find>
       <find>auth.user</find>
       <find>app.</find>
       <find>retrospect</find>
@@ -177,6 +167,7 @@
       <find>z-index</find>
       <find>aliyunsdkcore</find>
       <find>获得验证码</find>
+      <find>sendOkMsg</find>
     </findStrings>
     <replaceStrings>
       <replace>m.</replace>
@@ -225,8 +216,8 @@
         <option value="$PROJECT_DIR$/retrospect/settings.py" />
         <option value="$PROJECT_DIR$/update.sh" />
         <option value="$PROJECT_DIR$/app/views.py" />
-        <option value="$PROJECT_DIR$/app/static/app/css/show.scss" />
         <option value="$PROJECT_DIR$/app/templates/app/show.html" />
+        <option value="$PROJECT_DIR$/app/static/app/css/show.scss" />
       </list>
     </option>
   </component>
@@ -690,19 +681,26 @@
       <option name="project" value="LOCAL" />
       <updated>1534485940619</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="弹框样式修改">
+      <created>1534487592459</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1534487592459</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="971" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22771673" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23015873" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4981685" visible="true" weight="0.24459614" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4981685" weight="0.24459614" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4993895" weight="0.3208191" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -782,7 +780,8 @@
     <MESSAGE value="一键部署优化" />
     <MESSAGE value="核销关联客户" />
     <MESSAGE value="增加下划线" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加下划线" />
+    <MESSAGE value="弹框样式修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="弹框样式修改" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1125,21 +1124,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
+    <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="224" column="25" selection-start-line="224" selection-start-column="25" selection-end-line="224" selection-end-column="25" />
+        <state relative-caret-position="211">
+          <caret line="159" column="43" selection-start-line="159" selection-start-column="43" selection-end-line="159" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
+    <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="330" column="24" selection-start-line="330" selection-start-column="24" selection-end-line="330" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#div#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="202">
+          <caret line="182" column="19" selection-start-line="182" selection-start-column="19" selection-end-line="182" selection-end-column="19" />
         </state>
       </provider>
     </entry>
