@@ -28,11 +28,20 @@ python manage.py makemigrations
 # 执行数据库升级操作
 python manage.py migrate
 
-# 停止web服务
-killall -9 uwsgi
 
-# 启动web服务
+# 停止和启动memcached缓存服务
+systemctrl restart memcached
+systemctrl status memcached
+
+
+# 停止和启动web服务集群
+killall -9 uwsgi
 nohup uwsgi --ini uwsgi.ini & ls
+
+# 停止和启动nginx
+systemctrl restart nginx
+systemctrl status nginx
+
 
 # 产看启动的集群进程，好放心
 ps -ef | grep uwsgi
