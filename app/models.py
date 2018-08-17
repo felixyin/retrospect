@@ -76,7 +76,7 @@ class Wine(BaseModel):
     # area = m.ImageField('产区介绍', upload_to='upload/wine/area/%Y/%m/')
 
     certificate = m.ImageField('原产地证', upload_to='upload/wine/cert/%y/%m/', default=None, null=True)
-    element = RichTextField(max_length=50, config_name='mini', verbose_name='成分', default=None, null=True)
+    element = m.TextField('成分', max_length=50, default=None, null=True)
 
     sober_up_time_best = m.IntegerField('最佳醒酒时间', blank=False)
 
