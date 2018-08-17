@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc5f8f8c-6c0f-4dc3-9fe7-db3d84bb5e92" name="Default Changelist" comment="一键部署优化">
+    <list default="true" id="dc5f8f8c-6c0f-4dc3-9fe7-db3d84bb5e92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/app/img/not-hexiao.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/img/not-hexiao.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/app/img/ok-hexiao.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/img/ok-hexiao.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/app/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/update.sh" beforeDir="false" afterPath="$PROJECT_DIR$/update.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/app/css/show.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/app/css/show.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/app/css/show.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,16 +25,16 @@
     <session id="858079268">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -51,7 +50,7 @@
           <entry key="md" value="1" />
           <entry key="py" value="118" />
           <entry key="pyi" value="1" />
-          <entry key="scss" value="4" />
+          <entry key="scss" value="5" />
           <entry key="sh" value="9" />
           <entry key="txt" value="12" />
         </counts>
@@ -68,7 +67,7 @@
           <entry key="PLAIN_TEXT" value="18" />
           <entry key="Python" value="115" />
           <entry key="PythonStub" value="1" />
-          <entry key="SCSS" value="4" />
+          <entry key="SCSS" value="5" />
           <entry key="Scratch" value="3" />
         </counts>
       </usages-collector>
@@ -79,10 +78,10 @@
           <entry key="gitignore" value="79" />
           <entry key="html" value="7262" />
           <entry key="ini" value="69" />
-          <entry key="py" value="11676" />
-          <entry key="scss" value="2638" />
+          <entry key="py" value="11763" />
+          <entry key="scss" value="2644" />
           <entry key="sh" value="432" />
-          <entry key="txt" value="125" />
+          <entry key="txt" value="133" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -91,21 +90,21 @@
           <entry key="CSS" value="2" />
           <entry key="HTML" value="7260" />
           <entry key="Ini" value="69" />
-          <entry key="PLAIN_TEXT" value="401" />
-          <entry key="Python" value="11031" />
-          <entry key="SCSS" value="2638" />
+          <entry key="PLAIN_TEXT" value="409" />
+          <entry key="Python" value="11118" />
+          <entry key="SCSS" value="2644" />
           <entry key="Scratch" value="645" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+            <state relative-caret-position="791">
+              <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -114,10 +113,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="364" column="46" selection-start-line="364" selection-start-column="46" selection-end-line="364" selection-end-column="46" />
+            <state relative-caret-position="6916">
+              <caret line="364" column="41" selection-start-line="364" selection-start-column="41" selection-end-line="364" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -206,14 +214,14 @@
         <option value="$PROJECT_DIR$/extra_apps/demo_sms_send.py" />
         <option value="$PROJECT_DIR$/extra_apps/dysms_python/demo_sms_send.py" />
         <option value="$PROJECT_DIR$/app/util.py" />
-        <option value="$PROJECT_DIR$/app/static/app/css/show.scss" />
         <option value="$PROJECT_DIR$/app/urls.py" />
-        <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/admin.py" />
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/retrospect/settings.py" />
         <option value="$PROJECT_DIR$/update.sh" />
         <option value="$PROJECT_DIR$/app/templates/app/show.html" />
+        <option value="$PROJECT_DIR$/app/views.py" />
+        <option value="$PROJECT_DIR$/app/static/app/css/show.scss" />
       </list>
     </option>
   </component>
@@ -239,7 +247,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,6 +271,14 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="retrospect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="retrospect" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="retrospect" type="b2602c69:ProjectViewProjectNode" />
@@ -311,6 +326,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -648,19 +664,26 @@
       <option name="project" value="LOCAL" />
       <updated>1534459137275</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="核销关联客户">
+      <created>1534484422792</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1534484422792</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="971" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22527473" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22771673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4981685" weight="0.24459614" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4981685" visible="true" weight="0.24459614" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4993895" weight="0.3208191" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -738,7 +761,8 @@
     <MESSAGE value="客户管理" />
     <MESSAGE value="自动判断服务器，启用不同配置文件" />
     <MESSAGE value="一键部署优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="一键部署优化" />
+    <MESSAGE value="核销关联客户" />
+    <option name="LAST_COMMIT_MESSAGE" value="核销关联客户" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -973,13 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="172" column="13" selection-start-line="172" selection-start-column="13" selection-end-line="172" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/retrospect/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -1012,12 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="157" column="32" lean-forward="true" selection-start-line="157" selection-start-column="32" selection-end-line="157" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1534457139145" expanded="true" signature="828:2001" ph="..." />
-            <marker date="1534457139145" expanded="true" signature="1194:2001" ph="..." />
-            <marker date="1534457139145" expanded="true" signature="6233:6519" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1025,9 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="e#634#671#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1080,8 +1088,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+        <state relative-caret-position="791">
+          <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
@@ -1090,8 +1098,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="364" column="46" selection-start-line="364" selection-start-column="46" selection-end-line="364" selection-end-column="46" />
+        <state relative-caret-position="6916">
+          <caret line="364" column="41" selection-start-line="364" selection-start-column="41" selection-end-line="364" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/app/css/show.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
         </state>
       </provider>
     </entry>
