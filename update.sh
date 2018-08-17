@@ -30,8 +30,8 @@ python manage.py migrate
 
 
 # 停止和启动memcached缓存服务
-systemctrl restart memcached
-systemctrl status memcached
+systemctl restart memcached
+systemctl status memcached
 
 
 # 停止和启动web服务集群
@@ -39,8 +39,8 @@ killall -9 uwsgi
 nohup uwsgi --ini uwsgi.ini & ls
 
 # 停止和启动nginx
-systemctrl restart nginx
-systemctrl status nginx
+systemctl restart nginx
+systemctl status nginx
 
 
 # 产看启动的集群进程，好放心
