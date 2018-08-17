@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc5f8f8c-6c0f-4dc3-9fe7-db3d84bb5e92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/app/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/show.html" afterDir="false" />
+    <list default="true" id="dc5f8f8c-6c0f-4dc3-9fe7-db3d84bb5e92" name="Default Changelist" comment="成分字段的显示">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,13 +39,13 @@
           <entry key="conf" value="3" />
           <entry key="css" value="2" />
           <entry key="gitattributes" value="1" />
-          <entry key="gitignore" value="2" />
+          <entry key="gitignore" value="3" />
           <entry key="html" value="17" />
           <entry key="ini" value="2" />
           <entry key="jpg" value="4" />
           <entry key="js" value="2" />
           <entry key="md" value="1" />
-          <entry key="py" value="119" />
+          <entry key="py" value="121" />
           <entry key="pyi" value="1" />
           <entry key="scss" value="7" />
           <entry key="sh" value="9" />
@@ -62,8 +61,8 @@
           <entry key="Ini" value="2" />
           <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Python" value="116" />
+          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="Python" value="118" />
           <entry key="PythonStub" value="1" />
           <entry key="SCSS" value="7" />
           <entry key="Scratch" value="3" />
@@ -73,13 +72,13 @@
         <counts>
           <entry key="conf" value="193" />
           <entry key="dummy" value="4" />
-          <entry key="gitignore" value="79" />
+          <entry key="gitignore" value="95" />
           <entry key="html" value="7608" />
           <entry key="ini" value="69" />
-          <entry key="py" value="11763" />
+          <entry key="py" value="11800" />
           <entry key="scss" value="3068" />
           <entry key="sh" value="432" />
-          <entry key="txt" value="148" />
+          <entry key="txt" value="156" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -88,8 +87,8 @@
           <entry key="CSS" value="2" />
           <entry key="HTML" value="7606" />
           <entry key="Ini" value="69" />
-          <entry key="PLAIN_TEXT" value="424" />
-          <entry key="Python" value="11118" />
+          <entry key="PLAIN_TEXT" value="448" />
+          <entry key="Python" value="11155" />
           <entry key="SCSS" value="3068" />
           <entry key="Scratch" value="645" />
         </counts>
@@ -98,11 +97,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="213" column="46" selection-start-line="213" selection-start-column="46" selection-end-line="213" selection-end-column="46" />
+            <state relative-caret-position="309">
+              <caret line="226" column="12" lean-forward="true" selection-start-line="226" selection-start-column="12" selection-end-line="226" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="545">
+              <caret line="109" column="15" selection-start-line="109" selection-start-column="15" selection-end-line="109" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -111,12 +119,12 @@
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="333">
-              <caret line="78" column="10" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="10" />
+              <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1534457139145" expanded="true" signature="828:2001" ph="..." />
-                <marker date="1534457139145" expanded="true" signature="1194:2001" ph="..." />
-                <marker date="1534457139145" expanded="true" signature="6233:6519" ph="..." />
+                <marker date="1534490020263" expanded="true" signature="828:2001" ph="..." />
+                <marker date="1534490020263" expanded="true" signature="1194:2001" ph="..." />
+                <marker date="1534490020263" expanded="true" signature="6198:6484" ph="..." />
               </folding>
             </state>
           </provider>
@@ -143,7 +151,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>auth.user</find>
       <find>app.</find>
       <find>retrospect</find>
       <find>app</find>
@@ -173,6 +180,7 @@
       <find>aliyunsdkcore</find>
       <find>获得验证码</find>
       <find>sendOkMsg</find>
+      <find>成分</find>
     </findStrings>
     <replaceStrings>
       <replace>m.</replace>
@@ -208,7 +216,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py" />
         <option value="$PROJECT_DIR$/templates/admin/base.html" />
         <option value="$PROJECT_DIR$/extra_apps/dysms_python/const.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/uwsgi.ini" />
         <option value="$PROJECT_DIR$/retrospect_nginx.conf" />
         <option value="$PROJECT_DIR$/extra_apps/aliyunsdkdysmsapi/request/v20170525/SendSmsRequest.py" />
@@ -217,12 +224,14 @@
         <option value="$PROJECT_DIR$/app/util.py" />
         <option value="$PROJECT_DIR$/app/urls.py" />
         <option value="$PROJECT_DIR$/app/admin.py" />
-        <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/retrospect/settings.py" />
         <option value="$PROJECT_DIR$/update.sh" />
         <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/static/app/css/show.scss" />
         <option value="$PROJECT_DIR$/app/templates/app/show.html" />
+        <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/app/migrations/0002_auto_20180817_1514.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -259,6 +268,12 @@
               <item name="retrospect" type="b2602c69:ProjectViewProjectNode" />
               <item name="retrospect" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="retrospect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="retrospect" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="retrospect" type="b2602c69:ProjectViewProjectNode" />
@@ -707,7 +722,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534489369829</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="成分字段的显示">
+      <created>1534490188503</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1534490188503</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -719,7 +741,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4981685" visible="true" weight="0.24459614" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4981685" weight="0.24459614" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4993895" weight="0.3208191" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -728,7 +750,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32992035" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50183153" side_tool="true" weight="0.24459614" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4981685" weight="0.261661" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4981685" visible="true" weight="0.261661" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -800,7 +822,8 @@
     <MESSAGE value="核销关联客户" />
     <MESSAGE value="增加下划线" />
     <MESSAGE value="弹框样式修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="弹框样式修改" />
+    <MESSAGE value="成分字段的显示" />
+    <option name="LAST_COMMIT_MESSAGE" value="成分字段的显示" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -864,16 +887,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/django/core/management/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-283">
-          <caret line="270" column="8" selection-start-line="270" selection-start-column="8" selection-end-line="270" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/django/core/management/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4674">
@@ -964,13 +977,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/dysms_python/demo_sms_query.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="99" column="22" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/dysms_python/demo_sms_api.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1137,23 +1143,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/migrations/0002_auto_20180817_1513.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/migrations/0002_auto_20180817_1514.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
-          <caret line="78" column="10" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="10" />
+          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1534457139145" expanded="true" signature="828:2001" ph="..." />
-            <marker date="1534457139145" expanded="true" signature="1194:2001" ph="..." />
-            <marker date="1534457139145" expanded="true" signature="6233:6519" ph="..." />
+            <marker date="1534490020263" expanded="true" signature="828:2001" ph="..." />
+            <marker date="1534490020263" expanded="true" signature="1194:2001" ph="..." />
+            <marker date="1534490020263" expanded="true" signature="6198:6484" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="213" column="46" selection-start-line="213" selection-start-column="46" selection-end-line="213" selection-end-column="46" />
+        <state relative-caret-position="309">
+          <caret line="226" column="12" lean-forward="true" selection-start-line="226" selection-start-column="12" selection-end-line="226" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="109" column="15" selection-start-line="109" selection-start-column="15" selection-end-line="109" selection-end-column="15" />
         </state>
       </provider>
     </entry>

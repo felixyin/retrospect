@@ -107,3 +107,4 @@ media/
 collectstatic/
 .idea/
 retrospect/settings.py
+app/migrations/
