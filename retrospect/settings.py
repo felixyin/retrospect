@@ -133,6 +133,7 @@ if operator.contains(p, 'Darwin'):  # 当我开发时的配置
         },
     ]
 
+    USE_L10N = False
     # DATETIME_FORMAT = 'Y-m-d H:i'
     DATETIME_FORMAT = 'Y-m-d'
     DATE_FORMAT = 'Y-m-d'
@@ -553,7 +554,7 @@ else:
         },
     ]
 
-
+    USE_L10N = False
     # DATETIME_FORMAT = 'Y-m-d H:i'
     DATETIME_FORMAT = 'Y-m-d'
     DATE_FORMAT = 'Y-m-d'
