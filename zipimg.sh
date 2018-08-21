@@ -56,7 +56,8 @@ echo '优化后大于150k的图片：'
 find /root/retrospect/media/ -regex '.*\(jpg\|JPG\|png\|jpeg\)' -size +150k
 
 
-cd ~
+# 回到之前的目录
+cd -
 
 
 #for i in /root/retrospect/media/*.jpg; do jpegoptim $i; done

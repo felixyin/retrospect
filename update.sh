@@ -66,4 +66,5 @@ systemctl status nginx
 ps -ef | grep uwsgi
 
 
-
+# 回到之前的目录
+cd -
