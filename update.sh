@@ -32,6 +32,12 @@ zipimg
 # 收集静态文件，为nginx使用
 python manage.py collectstatic
 
+# 免输yes、no，默认no
+/usr/bin/expect <<-EOF
+send "yes\n"
+expect eof
+EOF
+
 
 # 计算和生成数据库升级脚本
 python manage.py makemigrations

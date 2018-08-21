@@ -12,6 +12,8 @@ find /root/retrospect/media/ -regex '.*\(jpg\|JPG\|png\|jpeg\)' -size +150k
 
 
 
+echo '正在压缩图片，可能需要点时间，请耐心等待~~~~'
+
 find /root/retrospect/media/ -regex '.*\(jpg\|JPG\|png\|jpeg\)' -size +150k -exec convert -resize 90%x90% {} {} \;
 
 find /root/retrospect/media/ -regex '.*\(jpg\|JPG\|png\|jpeg\)' -size +150k -exec convert -resize 90%x90% {} {} \;
