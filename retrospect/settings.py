@@ -840,12 +840,12 @@ else:
     CACHE_MIDDLEWARE_ANONYMOUS_ONLY = False  # 那么只有匿名的请求会被缓存，这是一个禁用缓存非匿名用户页面的最简单的做法，注意确保已经启用了Django用户认证中间件
     CACHES = {
         'default': {
-            'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',  # memcache 引擎
-            # 'BACKEND': 'django.core.cache.backends.dummy.DummyCache',  # 调试引擎
+            # 'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',  # memcache 引擎
+            'BACKEND': 'django.core.cache.backends.dummy.DummyCache',  # 调试引擎
             'LOCATION': [
                 '127.0.0.1:11211',
             ],
-            'TIMEOUT': None,  # 缓存超时时间（默认300，None表示永不过期，0表示立即过期）
+            'TIMEOUT': 10,  # 缓存超时时间（默认300，None表示永不过期，0表示立即过期）
             # 'OPTIONS': {
             # 'MAX_ENTRIES': 300,  # 最大缓存个数（默认300）
             # 'CULL_FREQUENCY': 3,  # 缓存到达最大个数之后，剔除缓存个数的比例，即：1/CULL_FREQUENCY（默认3）
