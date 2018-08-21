@@ -136,7 +136,7 @@ if operator.contains(p, 'Darwin'):  # 当我开发时的配置
     # Internationalization
     # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-    IMPORT_EXPORT_USE_TRANSACTIONS = 'zh-hans'
+    IMPORT_EXPORT_USE_TRANSACTIONS = 'zh_Hans'
 
     LANGUAGE_CODE = 'zh-hans'
 
@@ -552,7 +552,7 @@ else:
     # Internationalization
     # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-    IMPORT_EXPORT_USE_TRANSACTIONS = 'zh-hans'
+    IMPORT_EXPORT_USE_TRANSACTIONS = 'zh_Hans'
 
     LANGUAGE_CODE = 'zh-hans'
 
