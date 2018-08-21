@@ -101,7 +101,7 @@ class BatchAdmin(admin.ModelAdmin):
     exclude = ('created_time',)
     view_on_site = True
 
-    actions = [gen_wine_items, view_wine_item, _post_export]
+    actions = [gen_wine_items, view_wine_item, ]
 
     class Meta:
         editable = False
