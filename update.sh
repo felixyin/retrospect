@@ -29,11 +29,12 @@ sudo chmod 777 zipimg.sh
 zipimg
 
 
-# 收集静态文件，为nginx使用
-python manage.py collectstatic
+
 
 # 免输入yes或no，默认yes
 /usr/bin/expect <<-EOF
+# 收集静态文件，为nginx使用
+spawn python manage.py collectstatic
 send "yes\n"
 expect eof
 EOF
