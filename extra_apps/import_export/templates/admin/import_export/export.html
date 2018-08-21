@@ -2,16 +2,12 @@
 {% load i18n %}
 {% load admin_urls %}
 {% load import_export_tags %}
-{% load static %}
 
 {% block breadcrumbs_last %}
 {% trans "Export" %}
 {% endblock %}
 
-{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />{% endblock %}
-
 {% block content %}
-
 <form action="" method="POST">
   {% csrf_token %}
 
@@ -34,8 +30,8 @@
     <div class="submit-row">
       <input type="submit" class="default" value="{% trans "Submit" %}">
     </div>
+    <script type="text/javascript">
+        $('#id_file_format').children().eq(3).remove()
+    </script>
 </form>
-<script type="text/javascript">
-    $('#id_file_format').children().eq(3).remove()
-</script>
 {% endblock %}
