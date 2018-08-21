@@ -106,8 +106,9 @@ class BatchAdmin(admin.ModelAdmin):
     def delete_model(self, request, obj):
         if not obj.is_gen:
             obj.delete()
+            return True
         else:
-            return
+            return False
 
     class Meta:
         editable = False
