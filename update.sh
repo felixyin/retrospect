@@ -50,6 +50,7 @@ python manage.py migrate
 
 # 停止和启动memcached缓存服务
 systemctl restart memcached
+systemctl enable memcached
 systemctl status memcached
 
 
