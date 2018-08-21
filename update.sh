@@ -32,7 +32,7 @@ zipimg
 # 收集静态文件，为nginx使用
 python manage.py collectstatic
 
-# 免输yes、no，默认no
+# 免输入yes或no，默认yes
 /usr/bin/expect <<-EOF
 send "yes\n"
 expect eof
