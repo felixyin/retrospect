@@ -69,7 +69,7 @@ if __name__ == '__main__':
     #print(__business_id)
     params = "{\"code\":\"12345\",\"product\":\"xx\"}"
 	#params = u'{"name":"wqb","code":"12345678","address":"bz","phone":"13000000000"}'
-    print(send_sms(__business_id, "18660228026", "用户注册验证码", "SMS_142510198", params))
+    print(send_sms(__business_id, "18660228026", "珍柏追溯", "SMS_142510198", params))
 
 
 

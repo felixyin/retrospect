@@ -43,7 +43,7 @@ def get_verify_code(request):
         params = "{\"code\":\"" + vc + "\",\"product\":\"xx\"}"
         result = {'Code': 'OK'}
         try:
-            result = ss.send_sms(__business_id, phone, "用户注册验证码", "SMS_142510198", params)
+            result = ss.send_sms(__business_id, phone, "珍柏追溯", "SMS_142510198", params)
         except Exception as e:
             pass
 
