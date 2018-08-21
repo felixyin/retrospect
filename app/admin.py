@@ -6,6 +6,9 @@ from django.urls import reverse
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
+from django.dispatch import receiver
+from import_export.signals import post_import, post_export
+
 from .models import *
 from .util import *
 
@@ -82,6 +85,15 @@ def view_wine_item(modeladmin, request, queryset):
 view_wine_item.short_description = '查看'
 
 
+@receiver(post_export, dispatch_uid='balabala...')
+def _post_export(model, **kwargs):
+    # model is the actual model instance which after export
+    model = WineItemResource
+
+
+_post_export.short_description = '导出'
+
+
 class BatchAdmin(admin.ModelAdmin):
     list_display = ('created_time', 'batch_code', 'wine', 'count', 'is_gen', 'last_mod_time', 'sequence',)
     search_fields = ('batch_code', 'count')
@@ -89,7 +101,7 @@ class BatchAdmin(admin.ModelAdmin):
     exclude = ('created_time',)
     view_on_site = True
 
-    actions = [gen_wine_items, view_wine_item]
+    actions = [gen_wine_items, view_wine_item, _post_export]
 
     class Meta:
         editable = False
