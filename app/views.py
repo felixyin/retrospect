@@ -83,6 +83,7 @@ def he_xiao(request):
         wu = WineUser.objects.filter(phone=phone).all()[0]
         wi.w_user = wu
         wi.status = 'y'
+        wi.retrospect_time = now()
         wi.save()
         # 清除页面缓存
         key = get_cache_key(request)

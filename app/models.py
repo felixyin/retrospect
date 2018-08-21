@@ -147,6 +147,7 @@ class WineItem(m.Model):
     created_time = m.DateTimeField('创建时间', blank=False, editable=False)
     first_visit_time = m.DateTimeField('第一次访问时间', null=True, editable=False)
     last_visit_time = m.DateTimeField('最后访问时间', null=True, editable=False)
+    retrospect_time = m.DateTimeField('核销时间', null=True, editable=False)
     batch = m.ForeignKey(Batch, on_delete=m.CASCADE, editable=False)
     url = m.URLField('二维码地址', null=False, default=None)
 
