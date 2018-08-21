@@ -183,36 +183,7 @@
             <div class="retrospect-item">
                 <div class="info-title">溯源信息</div>
                 <p>原产地:{{ wi.batch.wine.area_name }}</p>
-                <p>原产地证:</p>
-                <div class="row">
-                    <div class="col-sm">
-                        <div id="carouselArea2" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                {% for areaAttach in wi.batch.wine.areaattach_set.all %}
-                                    <li data-target="#carouselArea2" data-slide-to="{{ forloop.counter0 }}"
-                                        class=" {% if forloop.first %} active {% endif %}"></li>
-                                {% endfor %}
-                            </ol>
-                            <div class="carousel-inner">
-                                {% for areaAttach in wi.batch.wine.areaattach_set.all %}
-                                    <div class="carousel-item  {% if forloop.first %} active {% endif %} ">
-                                        <a class="my-img-open3" href="{{ areaAttach.img.url }}" title="产地">
-                                            <img class="d-block w-100" src="{{ areaAttach.img.url }}">
-                                        </a>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselArea2" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselArea2" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <p>原产地证: <a class="my-img-open3" href="{{ wi.batch.origin_book.url }}" title="原产地证">点击查看</a></p>
                 <p>成分:{{ wi.batch.wine.element }}</p>
                 <p>存储条件:{{ wi.batch.wine.storage_mode }}</p>
                 <p>进口代理商:{{ wi.batch.agent_com }}</p>
