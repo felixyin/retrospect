@@ -53,11 +53,11 @@
         </div>
         <div class="row my-wine-code">
             <span></span>
-            <p class="">瓶身编号:{{ wi.wine_code }}</p>
+            <p >瓶身编号:{{ wi.wine_code }}</p>
         </div>
         {% if wi.status == 'y' %}
-            <div class="row">
-                <p style="margin: 0 auto;">{{ wi.w_user.phone }}用户在{{ wi.retrospect_time }}时间核销此商品</p>
+            <div class="row my-hexiao-time">
+                <p >{{ wi.w_user.phone }}用户在{{ wi.retrospect_time }}时间核销此商品</p>
             </div>
         {% endif %}
         <span class="clearfix"></span>

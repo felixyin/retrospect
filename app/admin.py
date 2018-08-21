@@ -103,6 +103,10 @@ class BatchAdmin(admin.ModelAdmin):
 
     actions = [gen_wine_items, view_wine_item, ]
 
+    def delete_model(self, request, obj):
+        if not obj.is_gen:
+            obj.delete()
+
     class Meta:
         editable = False
 
