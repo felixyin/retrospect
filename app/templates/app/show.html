@@ -326,13 +326,13 @@
 
     <script type="text/javascript">
         {# 点击图片弹出层 #}
-        $('.my-img-open1,.my-img-open2,.my-img-open3,.my-img-open4,.my-img-open5,.my-img-open6,.my-img-open7')
-            .magnificPopup({
-                type: 'image',
-                gallery: {
-                    enabled: true,
-                }
-            });
+        $('.my-img-open1').magnificPopup({ type: 'image', gallery: { enabled: true, } });
+        $('.my-img-open2').magnificPopup({ type: 'image', gallery: { enabled: true, } });
+        $('.my-img-open3').magnificPopup({ type: 'image', gallery: { enabled: true, } });
+        $('.my-img-open4').magnificPopup({ type: 'image', gallery: { enabled: true, } });
+        $('.my-img-open5').magnificPopup({ type: 'image', gallery: { enabled: true, } });
+        $('.my-img-open6').magnificPopup({ type: 'image', gallery: { enabled: true, } });
+        $('.my-img-open7').magnificPopup({ type: 'image', gallery: { enabled: true, } });
 
         {# 设置django需要的ajax配置：post必须要传送csrf_token #}
         $.ajaxSetup({
