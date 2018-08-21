@@ -109,6 +109,7 @@ class Batch(BaseModel):
     count = m.IntegerField('生成数量', blank=False)
     is_gen = m.BooleanField('已经生成？', blank=False, editable=False, default=False)
 
+    origin_book = m.ImageField('原产地证', upload_to='upload/batch/origin/%y/%m/', default=None, null=True)
     element = m.CharField('成分', max_length=50, default=None, null=True)
     agent_com = m.CharField('进口代理商', max_length=50, default=None, null=True)
     promise_book = m.ImageField('企业承诺书', upload_to='upload/batch/promise/%y/%m/', default=None, null=True)
