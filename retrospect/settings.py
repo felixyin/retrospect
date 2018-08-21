@@ -133,10 +133,10 @@ if operator.contains(p, 'Darwin'):  # 当我开发时的配置
         },
     ]
 
-    USE_L10N = False
+    # USE_L10N = False
     # DATETIME_FORMAT = 'Y-m-d H:i'
-    DATETIME_FORMAT = 'Y-m-d'
-    DATE_FORMAT = 'Y-m-d'
+    # DATETIME_FORMAT = 'Y-m-d'
+    # DATE_FORMAT = 'Y-m-d'
 
     # Internationalization
     # https://docs.djangoproject.com/en/1.10/topics/i18n/
@@ -554,10 +554,10 @@ else:
         },
     ]
 
-    USE_L10N = False
+    # USE_L10N = False
     # DATETIME_FORMAT = 'Y-m-d H:i'
-    DATETIME_FORMAT = 'Y-m-d'
-    DATE_FORMAT = 'Y-m-d'
+    # DATETIME_FORMAT = 'Y-m-d'
+    # DATE_FORMAT = 'Y-m-d'
 
     # Internationalization
     # https://docs.djangoproject.com/en/1.10/topics/i18n/
