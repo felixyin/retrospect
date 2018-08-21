@@ -133,6 +133,10 @@ if operator.contains(p, 'Darwin'):  # 当我开发时的配置
         },
     ]
 
+    # DATETIME_FORMAT = 'Y-m-d H:i'
+    DATETIME_FORMAT = 'Y-m-d'
+    DATE_FORMAT = 'Y-m-d'
+
     # Internationalization
     # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
@@ -548,6 +552,11 @@ else:
             'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
         },
     ]
+
+
+    # DATETIME_FORMAT = 'Y-m-d H:i'
+    DATETIME_FORMAT = 'Y-m-d'
+    DATE_FORMAT = 'Y-m-d'
 
     # Internationalization
     # https://docs.djangoproject.com/en/1.10/topics/i18n/
