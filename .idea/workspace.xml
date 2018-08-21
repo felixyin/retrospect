@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dc5f8f8c-6c0f-4dc3-9fe7-db3d84bb5e92" name="Default Changelist" comment="核销时间显示">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/app/css/show.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/app/css/show.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/show.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/app/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/show.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -101,11 +100,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="44" column="14" lean-forward="true" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+            <state relative-caret-position="437">
+              <caret line="59" column="81" selection-start-line="59" selection-start-column="81" selection-end-line="59" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -128,11 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/static/app/css/show.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="181" column="2" selection-start-line="181" selection-start-column="2" selection-end-line="181" selection-end-column="2" />
+            <state relative-caret-position="236">
+              <caret line="173" column="13" lean-forward="true" selection-start-line="173" selection-start-column="13" selection-end-line="173" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -140,8 +139,8 @@
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="105" selection-start-line="105" selection-end-line="105" />
+            <state relative-caret-position="293">
+              <caret line="105" column="40" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -152,8 +151,8 @@
       <file leaf-file-name="options.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/options.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="1031" column="10" selection-start-line="1031" selection-start-column="10" selection-end-line="1031" selection-end-column="10" />
+            <state relative-caret-position="-677">
+              <caret line="1737" column="8" selection-start-line="1737" selection-start-column="8" selection-end-line="1737" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -281,10 +280,10 @@
         <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/retrospect/settings.py" />
-        <option value="$PROJECT_DIR$/app/templates/app/show.html" />
-        <option value="$PROJECT_DIR$/app/admin.py" />
         <option value="$PROJECT_DIR$/app/static/app/css/show.scss" />
         <option value="$PROJECT_DIR$/app/static/app/css/show.css" />
+        <option value="$PROJECT_DIR$/app/admin.py" />
+        <option value="$PROJECT_DIR$/app/templates/app/show.html" />
       </list>
     </option>
   </component>
@@ -548,20 +547,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1533698486509</updated>
-    </task>
-    <task id="LOCAL-00033" summary="成分字段的显示">
-      <created>1534490188503</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1534490188503</updated>
-    </task>
-    <task id="LOCAL-00034" summary="成分字段的显示">
-      <created>1534490350049</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1534490350049</updated>
     </task>
     <task id="LOCAL-00035" summary="修复bugs">
       <created>1534822337937</created>
@@ -892,7 +877,21 @@
       <option name="project" value="LOCAL" />
       <updated>1534843217554</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="核销时间显示">
+      <created>1534843353560</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1534843353560</updated>
+    </task>
+    <task id="LOCAL-00083" summary="核销时间显示">
+      <created>1534843608206</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1534843608206</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -905,8 +904,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32992035" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32997763" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49720448" weight="0.3378076" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49659508" visible="true" weight="0.26537585" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20900996" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49659508" visible="true" weight="0.26537585" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20900996" />
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="R Graphics" order="4" />
@@ -1162,34 +1161,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/retrospect/settings.py">
+    <entry file="file://$PROJECT_DIR$/app/static/app/css/show.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="555" lean-forward="true" selection-start-line="555" selection-end-line="555" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="44" column="14" lean-forward="true" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/options.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="1031" column="10" selection-start-line="1031" selection-start-column="10" selection-end-line="1031" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="236">
+          <caret line="173" column="13" lean-forward="true" selection-start-line="173" selection-start-column="13" selection-end-line="173" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1200,10 +1175,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/app/css/show.css">
+    <entry file="file://$PROJECT_DIR$/retrospect/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="181" column="2" selection-start-line="181" selection-start-column="2" selection-end-line="181" selection-end-column="2" />
+        <state relative-caret-position="127">
+          <caret line="555" lean-forward="true" selection-start-line="555" selection-end-line="555" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-677">
+          <caret line="1737" column="8" selection-start-line="1737" selection-start-column="8" selection-end-line="1737" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="105" column="40" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/app/show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="59" column="81" selection-start-line="59" selection-start-column="81" selection-end-line="59" selection-end-column="81" />
         </state>
       </provider>
     </entry>

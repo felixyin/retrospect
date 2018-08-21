@@ -57,7 +57,7 @@
         </div>
         {% if wi.status == 'y' %}
             <div class="row my-hexiao-time">
-                <p >用户{{ wi.w_user.phone }}在{{ wi.retrospect_time }}已核销</p>
+                <p >用户{{ wi.w_user.phone }}在{{ wi.retrospect_time|date:"y-m-d H:i" }}已核销</p>
             </div>
         {% endif %}
         <span class="clearfix"></span>
