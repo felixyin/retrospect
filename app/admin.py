@@ -110,11 +110,12 @@ class BatchAdmin(admin.ModelAdmin):
 class WineItemResource(resources.ModelResource):
     class Meta:
         model = WineItem
-        fields = ('url', 'security_code', 'wine_code',)
+        fields = ('url', 'wine_code', 'security_code',)
+        export_order = ('url', 'wine_code', 'security_code',)
 
     def get_export_headers(self):
         # 是你想要的导出头部标题headers
-        return ['二维码地址', '核销验证码', '瓶身编号']
+        return ['二维码地址', '瓶身编号', '核销验证码', ]
 
     # def dehydrate_full_title(self, wi):
     #     return '%s-%s'.format(wi.batch.wine.name, wi.batch.batch_code)
