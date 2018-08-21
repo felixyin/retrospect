@@ -2,14 +2,16 @@
 {% load i18n %}
 {% load admin_urls %}
 {% load import_export_tags %}
+{% load static %}
 
 {% block breadcrumbs_last %}
 {% trans "Export" %}
 {% endblock %}
 
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />{% endblock %}
+
 {% block content %}
 
-{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />{% endblock %}
 <form action="" method="POST">
   {% csrf_token %}
 

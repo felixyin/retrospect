@@ -1,8 +1,10 @@
 {% extends "admin/import_export/change_list.html" %}
+{% load static %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />{% endblock %}
 
 {% block object-tools-items %}
 
-    {% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />{% endblock %}
     <style type="text/css">
         .object-tools>li:first-child{
             display: none;
