@@ -16,6 +16,7 @@ django-compressor==2.2
 django-debug-toolbar==1.9.1
 django-excel-response2==2.0.8
 django-haystack==2.8.1
+django-import-export==1.0.1
 django-js-asset==1.1.0
 django-models-ext==1.1.6
 django-pagedown==1.0.5
