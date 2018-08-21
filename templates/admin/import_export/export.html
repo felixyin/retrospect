@@ -8,6 +8,8 @@
 {% endblock %}
 
 {% block content %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />{% endblock %}
 <form action="" method="POST">
   {% csrf_token %}
 
