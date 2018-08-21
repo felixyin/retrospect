@@ -100,12 +100,19 @@ class WineItemResource(resources.ModelResource):
         model = WineItem
         fields = ('url', 'security_code', 'wine_code',)
 
+    def get_export_headers(self):
+        # 是你想要的导出头部标题headers
+        return ['二维码地址', '核销验证码', '瓶身编号']
+
+    # def dehydrate_full_title(self, wi):
+    #     return '%s-%s'.format(wi.batch.wine.name, wi.batch.batch_code)
+
 
 class WineItemAdmin(ImportExportModelAdmin):
     resource_class = WineItemResource
-    search_fields = ('wine_code', 'security_code', 'batch__batch_code',)
+    search_fields = ('wine_code', 'security_code', 'batch.batch_code', 'w_user.phone',)
     list_display = (
-    'wine_code', 'security_code', 'batch', 'w_user', 'status', 'count', 'first_visit_time', 'last_visit_time')
+        'wine_code', 'security_code', 'batch', 'w_user', 'status', 'count', 'first_visit_time', 'last_visit_time')
     list_filter = ('status', 'batch__wine', 'batch',)
     exclude = ('created_time',)
     sortable_by = ('-created_time',)
