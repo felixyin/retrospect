@@ -65,7 +65,8 @@ def gen_wine_items(modeladmin, request, queryset):
                 max_wine_code += 1
                 _id = str(uuid.uuid4())  # id、url加密
                 url = site + reverse('app:wine-item-detail', kwargs={'id': _id, })  # 二维码url
-                WineItem.objects.create(id=_id, wine_code=wc, security_code=sc, url=url, created_time=now(), batch_id=pk)
+                WineItem.objects.create(id=_id, wine_code=wc, security_code=sc, url=url, created_time=now(),
+                                        batch_id=pk)
 
             queryset.update(is_gen=True)  # 生成完毕，更新匹配生成状态
 
@@ -83,7 +84,7 @@ view_wine_item.short_description = '查看'
 
 class BatchAdmin(admin.ModelAdmin):
     list_display = ('created_time', 'batch_code', 'wine', 'count', 'is_gen', 'last_mod_time', 'sequence',)
-    search_fields = ('batch_code', 'wine', 'count')
+    search_fields = ('batch_code', 'count')
     list_filter = ('wine', 'is_gen',)
     exclude = ('created_time',)
     view_on_site = True
@@ -102,9 +103,10 @@ class WineItemResource(resources.ModelResource):
 
 class WineItemAdmin(ImportExportModelAdmin):
     resource_class = WineItemResource
-    search_fields = ('wine_code', 'security_code', 'batch',)
-    list_display = ('wine_code', 'security_code', 'batch', 'w_user', 'status', 'count', 'first_visit_time', 'last_visit_time')
-    list_filter = ('status', 'batch',)
+    search_fields = ('wine_code', 'security_code', 'batch__batch_code',)
+    list_display = (
+    'wine_code', 'security_code', 'batch', 'w_user', 'status', 'count', 'first_visit_time', 'last_visit_time')
+    list_filter = ('status', 'batch__wine', 'batch',)
     exclude = ('created_time',)
     sortable_by = ('-created_time',)
 
