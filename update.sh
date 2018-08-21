@@ -28,12 +28,11 @@ sudo chmod 777 zipimg.sh
 # 压缩图片
 zipimg
 
+# 清理静态资源
+rm -rf /root/retrospect/collectedstatic
 
-
-
-# 免输入yes或no，默认yes
+# 收集静态文件，为nginx使用,免输入yes或no，默认yes
 /usr/bin/expect <<-EOF
-# 收集静态文件，为nginx使用
 spawn python manage.py collectstatic
 send "yes\n"
 expect eof
