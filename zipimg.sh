@@ -3,7 +3,7 @@
 
 cd /root/retrospect/media/
 
-# 查看一下大于300k的图片
+# 查看一下大于200k的图片
 find /root/retrospect/media/ -regex '.*\(jpg\|JPG\|png\|jpeg\)' -size +200k
 
 find /root/retrospect/media/ -regex '.*\(jpg\|JPG\|png\|jpeg\)' -size +200k -exec convert -resize 90%x90% {} {} \;
