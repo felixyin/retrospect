@@ -522,7 +522,7 @@ else:
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'retrospect',
             'USER': 'root',
-            'PASSWORD': 'Hongjiu123',
+            'PASSWORD': 'Xr2107.',
             'HOST': '127.0.0.1',
             'PORT': 3306,
             'OPTIONS': {'charset': 'utf8'},
