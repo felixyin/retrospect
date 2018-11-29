@@ -56,8 +56,8 @@ systemctl status memcached
 
 
 # 停止和启动web服务集群
-killall -9 uwsgi
-nohup uwsgi --ini uwsgi.ini & ls
+killall -9 uwsgi_retrospect
+nohup uwsgi --ini uwsgi_retrospect.ini & ls
 
 # 停止和启动nginx
 systemctl restart nginx
