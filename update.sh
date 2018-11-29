@@ -13,6 +13,8 @@ tar -czvf  /root/backup/media-${send}.tar.gz /root/retrospect/media/
 # 切换到项目根目录
 cd /root/retrospect
 
+source venv/bin/active
+
 
 # 覆盖本地的方式，检出代码
 git fetch --all
