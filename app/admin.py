@@ -6,6 +6,9 @@ from django.urls import reverse
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
+from django.dispatch import receiver
+from import_export.signals import post_import, post_export
+
 from .models import *
 from .util import *
 
@@ -65,7 +68,8 @@ def gen_wine_items(modeladmin, request, queryset):
                 max_wine_code += 1
                 _id = str(uuid.uuid4())  # id、url加密
                 url = site + reverse('app:wine-item-detail', kwargs={'id': _id, })  # 二维码url
-                WineItem.objects.create(id=_id, wine_code=wc, security_code=sc, url=url, created_time=now(), batch_id=pk)
+                WineItem.objects.create(id=_id, wine_code=wc, security_code=sc, url=url, created_time=now(),
+                                        batch_id=pk)
 
             queryset.update(is_gen=True)  # 生成完毕，更新匹配生成状态
 
@@ -81,14 +85,30 @@ def view_wine_item(modeladmin, request, queryset):
 view_wine_item.short_description = '查看'
 
 
+@receiver(post_export, dispatch_uid='balabala...')
+def _post_export(model, **kwargs):
+    # model is the actual model instance which after export
+    model = WineItemResource
+
+
+_post_export.short_description = '导出'
+
+
 class BatchAdmin(admin.ModelAdmin):
     list_display = ('created_time', 'batch_code', 'wine', 'count', 'is_gen', 'last_mod_time', 'sequence',)
-    search_fields = ('batch_code', 'wine', 'count')
+    search_fields = ('batch_code', 'count')
     list_filter = ('wine', 'is_gen',)
     exclude = ('created_time',)
     view_on_site = True
 
-    actions = [gen_wine_items, view_wine_item]
+    actions = [gen_wine_items, view_wine_item, ]
+
+    def delete_model(self, request, obj):
+        if not obj.is_gen:
+            obj.delete()
+            return True
+        else:
+            return False
 
     class Meta:
         editable = False
@@ -97,14 +117,23 @@ class BatchAdmin(admin.ModelAdmin):
 class WineItemResource(resources.ModelResource):
     class Meta:
         model = WineItem
-        fields = ('url', 'security_code', 'wine_code',)
+        fields = ('url', 'wine_code', 'security_code',)
+        export_order = ('url', 'wine_code', 'security_code',)
+
+    def get_export_headers(self):
+        # 是你想要的导出头部标题headers
+        return ['二维码地址', '瓶身编号', '核销验证码', ]
+
+    # def dehydrate_full_title(self, wi):
+    #     return '%s-%s'.format(wi.batch.wine.name, wi.batch.batch_code)
 
 
 class WineItemAdmin(ImportExportModelAdmin):
     resource_class = WineItemResource
-    search_fields = ('wine_code', 'security_code', 'batch',)
-    list_display = ('wine_code', 'security_code', 'batch', 'w_user', 'status', 'count', 'first_visit_time', 'last_visit_time')
-    list_filter = ('status', 'batch',)
+    search_fields = ('wine_code', 'security_code', 'batch.batch_code', 'w_user.phone',)
+    list_display = (
+        'wine_code', 'security_code', 'batch', 'w_user', 'status', 'count', 'retrospect_time', 'last_visit_time')
+    list_filter = ('status', 'batch__wine', 'batch', 'retrospect_time',)
     exclude = ('created_time',)
     sortable_by = ('-created_time',)
 

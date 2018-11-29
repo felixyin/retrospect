@@ -1,7 +1,9 @@
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views.generic.detail import DetailView
-
+from django.core.cache import cache
+from django.http import HttpRequest
+from django.utils.cache import get_cache_key
 from dysms_python import demo_sms_send as ss
 from .models import *
 from .util import *
@@ -43,7 +45,7 @@ def get_verify_code(request):
         params = "{\"code\":\"" + vc + "\",\"product\":\"xx\"}"
         result = {'Code': 'OK'}
         try:
-            result = ss.send_sms(__business_id, phone, "阿里云短信测试专用", "SMS_142330060", params)
+            result = ss.send_sms(__business_id, phone, "珍柏追溯", "SMS_142510198", params)
         except Exception as e:
             pass
 
@@ -77,10 +79,16 @@ def he_xiao(request):
 
     wi = WineItem.objects.get(id__exact=id)
     if wi.security_code == security_code:
+        # 保存和核销人
         wu = WineUser.objects.filter(phone=phone).all()[0]
         wi.w_user = wu
         wi.status = 'y'
+        wi.retrospect_time = now()
         wi.save()
+        # 清除页面缓存
+        key = get_cache_key(request)
+        if cache.has_key(key):
+            cache.delete(key)
         # request.session['hx_status'] = '核销成功'
     # else:
     #     request.session['hx_status'] = '核销失败'

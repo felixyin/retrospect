@@ -167,5 +167,18 @@ html, body {
     background-color: #CE3105; }
   .modal-content .modal-footer span {
     flex: 1; }
-
+.my-hexiao-time {
+  position: relative;
+  width: 100%;
+  float: left;
+  top: -13px;
+  margin-left: 5px!important;
+}
+.my-hexiao-time>p {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #C62C03;
+    text-align: center;
+}
 /*# sourceMappingURL=show.css.map */

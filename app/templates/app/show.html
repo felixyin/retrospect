@@ -53,8 +53,13 @@
         </div>
         <div class="row my-wine-code">
             <span></span>
-            <p class="">瓶身编号:{{ wi.wine_code }}</p>
+            <p >瓶身编号:{{ wi.wine_code }}</p>
         </div>
+        {% if wi.status == 'y' %}
+            <div class="row my-hexiao-time">
+                <p >用户{{ wi.w_user.phone }}在{{ wi.retrospect_time|date:"y-m-d H:i" }}已核销</p>
+            </div>
+        {% endif %}
         <span class="clearfix"></span>
     </div>
 </div>
@@ -69,11 +74,13 @@
                    aria-selected="true">商品信息</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                   aria-controls="profile"
                    aria-selected="false">醒酒信息</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                   aria-controls="contact"
                    aria-selected="false">追溯信息</a>
             </li>
         </ul>
@@ -94,7 +101,7 @@
                             <div class="carousel-inner">
                                 {% for areaAttach in wi.batch.wine.areaattach_set.all %}
                                     <div class="carousel-item  {% if forloop.first %} active {% endif %} ">
-                                        <a class="my-img-open" href="{{ areaAttach.img.url }}" title="产地">
+                                        <a class="my-img-open1" href="{{ areaAttach.img.url }}" title="产地">
                                             <img class="d-block w-100" src="{{ areaAttach.img.url }}">
                                         </a>
                                     </div>
@@ -126,7 +133,7 @@
                             <div class="carousel-inner">
                                 {% for areaAttach in wi.batch.wine.chateauattach_set.all %}
                                     <div class="carousel-item  {% if forloop.first %} active {% endif %} ">
-                                        <a class="my-img-open" href="{{ areaAttach.img.url }}" title="酒庄">
+                                        <a class="my-img-open2" href="{{ areaAttach.img.url }}" title="酒庄">
                                             <img class="d-block w-100" src="{{ areaAttach.img.url }}">
                                         </a>
                                     </div>
@@ -174,61 +181,32 @@
                 该产品醒酒不宜超过<span class="time">{{ wi.batch.wine.sober_up_time_worst }}min</span>
             </p>
             <p>
-                开瓶后应<span class="store">{{ wi.batch.wine.storage_mode }}</span>方式存放
+                开瓶后应<span class="time">{{ wi.batch.wine.storage_mode }}</span>方式存放
             </p>
         </div>
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
             <div class="retrospect-item">
                 <div class="info-title">溯源信息</div>
                 <p>原产地:{{ wi.batch.wine.area_name }}</p>
-                <p>原产地证:</p>
-                <div class="row">
-                    <div class="col-sm">
-                        <div id="carouselArea2" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                {% for areaAttach in wi.batch.wine.areaattach_set.all %}
-                                    <li data-target="#carouselArea2" data-slide-to="{{ forloop.counter0 }}"
-                                        class=" {% if forloop.first %} active {% endif %}"></li>
-                                {% endfor %}
-                            </ol>
-                            <div class="carousel-inner">
-                                {% for areaAttach in wi.batch.wine.areaattach_set.all %}
-                                    <div class="carousel-item  {% if forloop.first %} active {% endif %} ">
-                                        <a class="my-img-open" href="{{ areaAttach.img.url }}" title="产地">
-                                            <img class="d-block w-100" src="{{ areaAttach.img.url }}">
-                                        </a>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselArea2" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselArea2" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <p>原产地证: <a class="my-img-open3" href="{{ wi.batch.origin_book.url }}" title="原产地证">点击查看</a></p>
                 <p>成分:{{ wi.batch.wine.element }}</p>
                 <p>存储条件:{{ wi.batch.wine.storage_mode }}</p>
                 <p>进口代理商:{{ wi.batch.agent_com }}</p>
-                <p>企业承诺书: <a class="my-img-open" href="{{ wi.batch.promise_book.url }}" title="企业承诺书">点击查看</a></p>
+                <p>企业承诺书: <a class="my-img-open4" href="{{ wi.batch.promise_book.url }}" title="企业承诺书">点击查看</a></p>
             </div>
             <div class="retrospect-item">
                 <div class="info-title">检测信息</div>
                 <p>检测日期:{{ wi.batch.check_date }}</p>
                 <p>寄检单号:{{ wi.batch.check_code }}</p>
-                <p>检验控疫证明: <a class="my-img-open" href="{{ wi.batch.check_prove.url }}" title="检验控疫证明">点击查看</a></p>
-                <p>成分分析证书: <a class="my-img-open" href="{{ wi.batch.analyze_book.url }}" title="成分分析证书">点击查看</a></p>
+                <p>检验控疫证明: <a class="my-img-open5" href="{{ wi.batch.check_prove.url }}" title="检验控疫证明">点击查看</a></p>
+                <p>成分分析证书: <a class="my-img-open6" href="{{ wi.batch.analyze_book.url }}" title="成分分析证书">点击查看</a></p>
                 <p>报检企业:{{ wi.batch.inspection_com }}</p>
             </div>
             <div class="retrospect-item">
                 <div class="info-title">通关信息</div>
                 <p>报关时间:{{ wi.batch.bill_time }}</p>
                 <p>报关单号:{{ wi.batch.bill_code }}</p>
-                <p>海关通关单: <a class="my-img-open" href="{{ wi.batch.bill_img.url }}" title="海关通关单">点击查看</a></p>
+                <p>海关通关单: <a class="my-img-open7" href="{{ wi.batch.bill_img.url }}" title="海关通关单">点击查看</a></p>
                 <p>报关企业:{{ wi.batch.bill_com }}</p>
             </div>
 
@@ -305,7 +283,8 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalCenterTitle">注册账号</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 55px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                style="width: 55px;">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -313,7 +292,8 @@
                         <div class="form-group row">
                             <label for="inputPhone1" class="col-12 col-form-label">手机号</label>
                             <div class="col-12">
-                                <input name="phone" type="text" class="form-control" id="inputPhone1" placeholder="请输入您的手机号">
+                                <input name="phone" type="text" class="form-control" id="inputPhone1"
+                                       placeholder="请输入您的手机号">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -351,16 +331,20 @@
 
     <script type="text/javascript">
         {# 点击图片弹出层 #}
-        $('.my-img-open').magnificPopup({
-            type: 'image',
-            gallery: {
-                enabled: true,
-            }
-        });
+        $('.my-img-open1').magnificPopup({type: 'image', gallery: {enabled: true,}});
+        $('.my-img-open2').magnificPopup({type: 'image', gallery: {enabled: true,}});
+        $('.my-img-open3').magnificPopup({type: 'image', gallery: {enabled: true,}});
+        $('.my-img-open4').magnificPopup({type: 'image', gallery: {enabled: true,}});
+        $('.my-img-open5').magnificPopup({type: 'image', gallery: {enabled: true,}});
+        $('.my-img-open6').magnificPopup({type: 'image', gallery: {enabled: true,}});
+        $('.my-img-open7').magnificPopup({type: 'image', gallery: {enabled: true,}});
+
+        {# 设置django需要的ajax配置：post必须要传送csrf_token #}
         $.ajaxSetup({
             data: {csrfmiddlewaretoken: '{{ csrf_token }}'}
         });
 
+        {# 核销按钮点击 #}
         $('#he-xiao-btn').click(function () {
             var local_phone = localStorage.getItem('phone');
             if (local_phone) {
@@ -371,6 +355,7 @@
             }
         });
 
+        {# 获取验证码按钮点击 #}
         $('#get-verify-code').click(function () {
             var phone = $('#inputPhone1').val();
             if ($.trim(phone)) {
@@ -390,6 +375,7 @@
             }
         });
 
+        {# 确认验证码按钮点击 #}
         $('#verify-code').click(function () {
             var vc = $('#inputVerifyCode1').val();
             var phone = $('#inputPhone1').val();
@@ -419,6 +405,7 @@
             }
         });
 
+        {# 核销窗口 取消按钮点击 #}
         $('#cancel-vc').click(function () {
             $('#hx-model').modal('hide');
         });
