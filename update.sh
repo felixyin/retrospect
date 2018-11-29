@@ -61,7 +61,7 @@ nohup uwsgi --ini uwsgi.ini & ls
 
 # 停止和启动nginx
 systemctl restart nginx
-systemctl status nginx
+#systemctl status nginx
 
 
 # 产看启动的集群进程，好放心

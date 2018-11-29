@@ -15,6 +15,7 @@ import platform
 import sys
 
 p = platform.platform()
+print(p)
 if operator.contains(p, 'Darwin'):  # 当我开发时的配置
 
     # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -108,8 +109,8 @@ if operator.contains(p, 'Darwin'):  # 当我开发时的配置
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'retrospect',
             'USER': 'root',
-            'PASSWORD': 'Ybkk1027',
-            'HOST': '127.0.0.1',
+            'PASSWORD': 'Xr2017.',
+            'HOST': '139.224.1.36',
             'PORT': 3306,
             'OPTIONS': {'charset': 'utf8mb4'},
         }
