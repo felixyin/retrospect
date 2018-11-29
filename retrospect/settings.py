@@ -208,19 +208,20 @@ if operator.contains(p, 'Darwin'):  # 当我开发时的配置
     BAIDU_NOTIFY_URL = "http://data.zz.baidu.com/urls?site=https://www.lylinux.net&token=1uAOGrMsUm5syDGn"
 
     # Emial:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
     # EMAIL_USE_TLS = True
-    EMAIL_USE_SSL = True
+    # EMAIL_USE_SSL = True
+    #
+    # EMAIL_HOST = 'smtp.mxhichina.com'
+    # EMAIL_PORT = 465
+    # EMAIL_HOST_USER = os.environ.get('DJANGO_EMAIL_USER')
+    # EMAIL_HOST_PASSWORD = os.environ.get('DJANGO_EMAIL_PASSWORD')
+    # DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+    # SERVER_EMAIL = os.environ.get('DJANGO_EMAIL_USER')
+    # # 设置debug=false 未处理异常邮件通知
+    # ADMINS = [('liangliang', 'liangliangyy@gmail.com')]
 
-    EMAIL_HOST = 'smtp.mxhichina.com'
-    EMAIL_PORT = 465
-    EMAIL_HOST_USER = os.environ.get('DJANGO_EMAIL_USER')
-    EMAIL_HOST_PASSWORD = os.environ.get('DJANGO_EMAIL_PASSWORD')
-    DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-    SERVER_EMAIL = os.environ.get('DJANGO_EMAIL_USER')
-    # 设置debug=false 未处理异常邮件通知
-    ADMINS = [('liangliang', 'liangliangyy@gmail.com')]
     # 微信管理员密码(两次md5获得)
     WXADMIN = '995F03AC401D6CABABAEF756FC4D43C7'
 
@@ -682,11 +683,11 @@ else:
             'null': {
                 'class': 'logging.NullHandler',
             },
-            'mail_admins': {
-                'level': 'ERROR',
-                'filters': ['require_debug_false'],
-                'class': 'django.utils.log.AdminEmailHandler'
-            },
+            # 'mail_admins': {
+            #     'level': 'ERROR',
+            #     'filters': ['require_debug_false'],
+            #     'class': 'django.utils.log.AdminEmailHandler'
+            # },
             'sentry': {
                 'level': 'ERROR',  # To capture more than ERROR, change to WARNING, INFO, etc.
                 'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
@@ -700,7 +701,9 @@ else:
                 'propagate': True,
             },
             'django.request': {
-                'handlers': ['mail_admins', 'sentry'],
+                'handlers': [
+                    # 'mail_admins',
+                    'sentry'],
                 'level': 'ERROR',
                 'propagate': False,
             },
