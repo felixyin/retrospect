@@ -1,4 +1,4 @@
-aliyun-python-sdk-core-v3==2.9.0
+aliyun-python-sdk-core-v3==2.8.6
 aliyunsdkcore==1.0.3
 asn1crypto==0.24.0
 bottle==0.12.13
